@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hatsMacroSchema.xsd">
+   <associatedConnections default="main">
+      <connection name="main"/>
+   </associatedConnections>
+   <extracts>
+      <extract handler="" index="0" indexed="false" name="acpr_xScreenName" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="false" updateVariableImmediately="false" variableName="acpr_xScreenName"/>
+      <extract handler="" index="0" indexed="false" name="acpr_xMessageCode" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="false" updateVariableImmediately="false" variableName="acpr_xMessageCode"/>
+      <extract handler="" index="0" indexed="false" name="acpr_xMessage" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="false" updateVariableImmediately="false" variableName="acpr_xMessage"/>
+      <extract handler="default.jsp" index="-1" indexed="false" name="acpr_xTitleType1" overwrite="false" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xTitle1" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="-1" indexed="true" name="acpr_xRelatedCustomersCustomer" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="true" updateVariableImmediately="false" variableName="acpr_xRelatedCustomersCustomer"/>
+      <extract handler="default.jsp" index="-1" indexed="false" name="acpr_xRelatedCustomersTie1" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="true" updateVariableImmediately="false" variableName="acpr_xRelatedCustomersTie"/>
+      <extract handler="default.jsp" index="-1" indexed="false" name="acpr_xAction" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="true" updateVariableImmediately="false" variableName="acpr_xAction"/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xCoid" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xPrd" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xAcct" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xSsn" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xCd" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xLine" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="xRelatedCustomersCounter" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="-1" indexed="false" name="acpr_xRelatedCustomersTie2" overwrite="false" planetype="TEXT_PLANE" save="true" separator="" showHandler="true" updateVariableImmediately="false" variableName="acpr_xRelatedCustomersTie"/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xRelatedCustomersNext" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="false" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="acpr_xRelatedCustomersSeq2" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="false" updateVariableImmediately="false" variableName=""/>
+      <extract handler="default.jsp" index="0" indexed="false" name="xMessageError" overwrite="true" planetype="TEXT_PLANE" save="false" separator="" showHandler="true" updateVariableImmediately="false" variableName=""/>
+   </extracts>
+   <prompts>
+      <prompt handler="default.jsp" name="acpr_pAccountsRequested" separator="" source="handler" value="" variableIndex="0" variableIndexed="false" variableName="" welApplID="" welIsPassword="false"/>
+      <prompt handler="default.jsp" name="acpr_pAcct" separator="" source="handler" value="" variableIndex="0" variableIndexed="false" variableName="" welApplID="" welIsPassword="false"/>
+   </prompts>
+   <HAScript author="" blockinput="false" creationdate="" delayifnotenhancedtn="0" description="" ignorepauseforenhancedtn="true" ignorepausetimeforenhancedtn="true" name="CIS_Acpr_subprd_priv" pausetime="300" promptall="true" supressclearevents="false" timeout="60000" usevars="true">
+
+    <vars>
+      <create name="$mClosed$" type="string" value=""/>
+      <create name="$nextRow$" type="string" value=""/>
+      <create name="$mOpened$" type="string" value=""/>
+      <create name="$mRefreshDate$" type="string" value=""/>
+      <create name="$mIncludeClosed$" type="boolean" value="false"/>
+      <create name="$mPKGWB$" type="boolean" value="false"/>
+      <create name="$mUIDROLTKNMID$" type="boolean" value="false"/>
+      <create name="$mCustomerTIE$" type="integer" value="0"/>
+      <create name="$mOKToRemove$" type="string" value=""/>
+      <create name="$mRelatedCustomersSeq2$" type="string" value=""/>
+      <create name="$mPrd$" type="string" value=""/>
+      <create name="$mMessageError$" type="string" value=""/>
+      <create name="$mRelatedCustomersNext$" type="string" value=""/>
+      <create name="$mAccountsRequested$" type="integer" value="0"/>
+      <create name="$mAccountCounter$" type="integer" value="0"/>
+      <create name="$mSAccountsRequested$" type="string" value=""/>
+      <create name="$mRelatedCustomersCounter$" type="integer" value="0"/>
+    </vars>
+
+
+    <!--null-->
+    <screen entryscreen="true" exitscreen="false" name="Start" transient="false">
+        <comment>
+            !visualinfo:x=309;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.GeneralScreenPropertiesPage;associatedScreenName=trn0091\Blank.hsc;y=15;!
+        </comment>
+        <description uselogic="1 and (2 and 3)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <numfields invertmatch="false" number="1" optional="false"/>
+            <numinputfields invertmatch="false" number="1" optional="false"/>
+        </description>
+        <actions>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="'I ACPR[enter]'" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="ACPR"/>
+        </nextscreens>
+    </screen>
+
+    <!--null-->
+    <screen entryscreen="false" exitscreen="false" name="ACPR" transient="false">
+        <comment>
+            !visualinfo:x=287;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.ScreenActionsPropertiesPage;associatedScreenName=CIS_ScreenLibrary\ACPR.hsc;y=108;!
+        </comment>
+        <description uselogic="1 and (2 and 3)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <cursor col="10" invertmatch="false" optional="false" row="3"/>
+            <string casesense="false" col="24" invertmatch="false" optional="false" row="1" value="'ACPR'" wrap="false"/>
+        </description>
+        <actions>
+            <prompt assigntovar="$mSAccountsRequested$" clearfield="false" col="0" default="" description="" encrypted="false" len="80" movecursor="false" name="'acpr_pAccountsRequested'" required="false" row="0" title="" varupdateonly="true" xlatehostkeys="true"/>
+            <varupdate name="$mAccountsRequested$" value="1"/>
+            <input col="10" encrypted="false" movecursor="true" row="3" value="'NXT'" xlatehostkeys="true"/>
+            <input col="17" encrypted="false" movecursor="true" row="4" value="'dda'" xlatehostkeys="true"/>
+            <prompt assigntovar="" clearfield="false" col="26" default="" description="" encrypted="false" len="80" movecursor="false" name="'acpr_pAcct'" required="false" row="4" title="" varupdateonly="false" xlatehostkeys="true"/>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="'[enter]'" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="ACPR_Customer_Loop"/>
+            <nextscreen name="ACPR_Error"/>
+        </nextscreens>
+    </screen>
+
+    <!--null-->
+    <screen entryscreen="false" exitscreen="true" name="End" transient="false">
+        <comment>
+            !visualinfo:x=329;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.ScreenActionsPropertiesPage;associatedScreenName=trn0091\Blank.hsc;y=575;!
+        </comment>
+        <description uselogic="1 and (2 and 3)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <numfields invertmatch="false" number="1" optional="false"/>
+            <numinputfields invertmatch="false" number="1" optional="false"/>
+        </description>
+        <actions>
+            <input col="1" encrypted="false" movecursor="true" row="1" value="$mMessageError$" xlatehostkeys="true"/>
+            <extract assigntovar="" continuous="false" ecol="80" erow="4" name="'xMessageError'" planetype="TEXT_PLANE" scol="1" srow="1" unwrap="false"/>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="'[clear]'" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+        </nextscreens>
+    </screen>
+
+    <!--null-->
+    <screen entryscreen="false" exitscreen="false" name="ACPR_Error" transient="false">
+        <comment>
+            !visualinfo:x=466;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.GeneralScreenPropertiesPage;associatedScreenName=CIS_ScreenLibrary\ACPR.hsc;y=310;!
+        </comment>
+        <description uselogic="1 and (2 and 3 and !4 and !5)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <cursor col="10" invertmatch="false" optional="false" row="3"/>
+            <string casesense="false" col="24" invertmatch="false" optional="false" row="1" value="'ACPR'" wrap="false"/>
+            <string casesense="false" col="51" invertmatch="true" optional="false" row="2" value="'ACTION SUCCESSFUL    '" wrap="false"/>
+            <string casesense="false" col="1" ecol="-1" erow="-1" invertmatch="true" optional="false" row="1" value="'\'64000\' || 64129\''" wrap="false"/>
+        </description>
+        <actions>
+            <extract assigntovar="" continuous="true" ecol="27" erow="1" name="'acpr_xScreenName'" planetype="TEXT_PLANE" scol="24" srow="1" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="49" erow="2" name="'acpr_xMessageCode'" planetype="TEXT_PLANE" scol="45" srow="2" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="80" erow="2" name="'acpr_xMessage'" planetype="TEXT_PLANE" scol="51" srow="2" unwrap="false"/>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="'[clear]'" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="Extract_Customer_Counter"/>
+        </nextscreens>
+    </screen>
+
+    <!--null-->
+    <screen entryscreen="false" exitscreen="false" name="ACPR_Customer_Loop" transient="false">
+        <comment>
+            !visualinfo:x=118;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.ScreenActionsPropertiesPage;associatedScreenName=CIS_ScreenLibrary\ACPR.hsc;y=299;!
+        </comment>
+        <description uselogic="1 and (2 and 3)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <string casesense="false" col="24" invertmatch="false" optional="false" row="1" value="'ACPR'" wrap="false"/>
+            <string casesense="false" col="51" invertmatch="false" optional="false" row="2" value="'ACTION SUCCESSFUL'" wrap="false"/>
+        </description>
+        <actions>
+            <varupdate name="$mMessageError$" value="$mMessageError$+'Top of the loop '"/>
+            <extract assigntovar="$mPrd$" continuous="true" ecol="19" erow="4" name="'acpr_xPrd'" planetype="TEXT_PLANE" scol="17" srow="4" unwrap="false"/>
+            <if condition="$mPrd$=='DDA'">
+            </if>
+            <else>
+                  <varupdate name="$mMessageError$" value="$mMessageError$+'Reached the end of DDA Accounts'"/>
+                  <input col="0" encrypted="false" movecursor="true" row="0" value="'[clear]'" xlatehostkeys="true"/>
+            </else>
+            <varupdate name="$mRelatedCustomersCounter$" value="$mRelatedCustomersCounter$+1"/>
+            <extract assigntovar="" continuous="true" ecol="2" erow="5" name="'acpr_xTitleType1'" planetype="TEXT_PLANE" scol="2" srow="5" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="48" erow="5" name="'acpr_xTitle1'" planetype="TEXT_PLANE" scol="4" srow="5" unwrap="false"/>
+            <extract assigntovar="$mRelatedCustomersNext$" continuous="true" ecol="80" erow="13" name="'acpr_xRelatedCustomersNext'" planetype="TEXT_PLANE" scol="77" srow="13" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="51" erow="15" name="'acpr_xRelatedCustomersCustomer'" planetype="TEXT_PLANE" scol="13" srow="15" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="56" erow="15" name="'acpr_xRelatedCustomersTie1'" planetype="TEXT_PLANE" scol="53" srow="15" unwrap="false"/>
+            <extract assigntovar="$mRelatedCustomersSeq2$" continuous="true" ecol="5" erow="16" name="'acpr_xRelatedCustomersSeq2'" planetype="TEXT_PLANE" scol="2" srow="16" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="49" erow="2" name="'acpr_xMessageCode'" planetype="TEXT_PLANE" scol="45" srow="2" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="80" erow="2" name="'acpr_xMessage'" planetype="TEXT_PLANE" scol="51" srow="2" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="15" erow="3" name="'acpr_xAction'" planetype="TEXT_PLANE" scol="10" srow="3" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="11" erow="4" name="'acpr_xCoid'" planetype="TEXT_PLANE" scol="7" srow="4" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="48" erow="4" name="'acpr_xAcct'" planetype="TEXT_PLANE" scol="26" srow="4" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="66" erow="4" name="'acpr_xSsn'" planetype="TEXT_PLANE" scol="58" srow="4" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="73" erow="4" name="'acpr_xCd'" planetype="TEXT_PLANE" scol="73" srow="4" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="80" erow="4" name="'acpr_xLine'" planetype="TEXT_PLANE" scol="80" srow="4" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="2" erow="5" name="'acpr_xTitleType1'" planetype="TEXT_PLANE" scol="2" srow="5" unwrap="false"/>
+            <extract assigntovar="" continuous="true" ecol="48" erow="5" name="'acpr_xTitle1'" planetype="TEXT_PLANE" scol="4" srow="5" unwrap="false"/>
+            <if condition="$mRelatedCustomersSeq2$=='    '">
+            </if>
+            <else>
+                  <varupdate name="$mRelatedCustomersCounter$" value="$mRelatedCustomersCounter$+1"/>
+                  <extract assigntovar="" continuous="false" ecol="51" erow="16" name="'acpr_xRelatedCustomersCustomer'" planetype="TEXT_PLANE" scol="13" srow="16" unwrap="false"/>
+                  <extract assigntovar="" continuous="false" ecol="56" erow="16" name="'acpr_xRelatedCustomersTie2'" planetype="TEXT_PLANE" scol="53" srow="16" unwrap="false"/>
+            </else>
+            <if condition="$mRelatedCustomersNext$ == '   1'">
+                  <varupdate name="$mAccountCounter$" value="$mAccountCounter$+1"/>
+                  <varupdate name="$mMessageError$" value="$mMessageError$+'updated acct cntr '"/>
+            </if>
+            <else>
+                  <varupdate name="$mMessageError$" value="$mMessageError$+'Did an inq '"/>
+                  <input col="10" encrypted="false" movecursor="true" row="3" value="'inq'" xlatehostkeys="true"/>
+                  <input col="0" encrypted="false" movecursor="true" row="0" value="'[enter]'" xlatehostkeys="true"/>
+            </else>
+            <if condition="$mAccountsRequested$==$mAccountCounter$ &amp;&amp; $mRelatedCustomersNext$ == '   1'">
+                  <input col="0" encrypted="false" movecursor="true" row="0" value="'[clear]'" xlatehostkeys="true"/>
+            </if>
+            <else>
+                  <varupdate name="$mMessageError$" value="$mMessageError$+'Did a nxt '"/>
+                  <input col="0" encrypted="false" movecursor="true" row="0" value="'nxt[enter]'" xlatehostkeys="true"/>
+            </else>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="ACPR_Customer_Loop"/>
+            <nextscreen name="ACPR_Error"/>
+            <nextscreen name="Extract_Customer_Counter"/>
+        </nextscreens>
+    </screen>
+
+    <!--null-->
+    <screen entryscreen="false" exitscreen="false" name="Extract_Customer_Counter" transient="false">
+        <comment>
+            !visualinfo:x=311;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.ScreenActionsPropertiesPage;associatedScreenName=trn0091\Blank.hsc;y=461;!
+        </comment>
+        <description uselogic="1 and (2 and 3)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <numfields invertmatch="false" number="1" optional="false"/>
+            <numinputfields invertmatch="false" number="1" optional="false"/>
+        </description>
+        <actions>
+            <input col="1" encrypted="false" movecursor="true" row="1" value="$mRelatedCustomersCounter$" xlatehostkeys="true"/>
+            <extract assigntovar="" continuous="false" ecol="5" erow="1" name="'xRelatedCustomersCounter'" planetype="TEXT_PLANE" scol="1" srow="1" unwrap="false"/>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="'[clear]'" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="End"/>
+        </nextscreens>
+    </screen>
+
+</HAScript>
+</macro>

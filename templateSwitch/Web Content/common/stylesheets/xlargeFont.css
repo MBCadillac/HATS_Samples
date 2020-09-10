@@ -1,0 +1,164 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+BODY {
+	font-size: x-large;
+}
+
+TD, P, INPUT {
+	font-size: x-large;
+}
+
+/* interactive control classes */
+OPTION.HATSOPTION {
+	font-size: x-large;
+}
+
+SELECT.HATSDROPDOWN {
+	font-size: x-large;
+}
+
+/* static text classes */
+SPAN.HATSTEXT {
+	font-size: x-large;
+}
+
+SPAN.HATSCAPTION {
+	font-size: x-large;
+}
+
+.HATSTABLEHEADER {
+	font-size: x-large;
+}
+
+TD.HATSTABLECELL {
+	font-size: x-large;
+}
+
+TD.HATSTABLECAPTIONCELL {
+	font-size: x-large;
+}
+
+/* Field style classes */
+.HATSFIELD {
+	font-size: x-large;
+}
+
+.HDF {
+	font-size: x-large;
+}
+
+/* links */
+A.HATSLINK:link, A.HATSLINK:visited {
+	font-size: x-large;
+}
+
+A.HATSPROTLINK:link, A.HATSPROTLINK:visited {
+	font-size: x-large;
+}
+
+.HBLANK {
+	font-size: x-large;
+}
+
+.HBLUE {
+	font-size: x-large;
+}
+
+.HGREEN {
+	font-size: x-large;
+}
+
+.HCYAN {
+	font-size: x-large;
+}
+
+.HRED {
+	font-size: x-large;
+}
+
+.HMAGENTA {
+	font-size: x-large;
+}
+
+.HBROWN {
+	font-size: x-large;
+}
+
+.HWHITE {
+	font-size: x-large;
+}
+
+.HGRAY {
+	font-size: x-large;
+}
+
+.HLBLUE {
+	font-size: x-large;
+}
+
+.HLGREEN {
+	font-size: x-large;
+}
+
+.HLCYAN {
+	font-size: x-large;
+}
+
+.HLRED {
+	font-size: x-large;
+}
+
+.HLMAGENTA {
+	font-size: x-large;
+}
+
+.HLYELLOW {
+	font-size: x-large;
+}
+
+.HHWHITE {
+	font-size: x-large;
+}
+
+/* Host keypad link */
+A.HostKeyLink {
+	font-size: x-large;
+}
+
+/* Application keypad link */
+A.ApplicationKeyLink {
+	font-size: x-large;
+}
+
+/* Application button */
+INPUT.ApplicationButton, select.ApplicationDropDown {
+	font-size: medium;
+}
+
+/* Host keypad function key button */
+INPUT.HostPFKey {
+	font-size: medium;
+}
+
+/* Host keypad application key button */
+INPUT.HostButton, select.HostDropDown {
+	font-size: medium;
+}
+
+/* Disconnect, error, busy page style classes */
+.HATSSTATUSHEADER {
+	font-size: xx-large;
+}
+
+.HATSSTATUSFOOTER {
+	font-size: medium;
+}
+
+.HATSFOOTERSTATUSHEADER {
+	font-size: medium;
+}
+
+.HATSFOOTERSTATUSINFO {
+	font-size: medium;
+}

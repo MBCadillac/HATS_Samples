@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hatsMacroSchema.xsd">
+   <associatedConnections default="wel">
+      <connection name="main"/>
+   </associatedConnections>
+   <extracts/>
+   <prompts>
+      <prompt handler="default.jsp" name="userId" separator="" source="variable" value="" variableIndex="0" variableIndexed="false" variableName="" welApplID="" welIsPassword="false"/>
+   </prompts>
+   <HAScript author="" blockinput="false" creationdate="" delayifnotenhancedtn="0" description="" ignorepauseforenhancedtn="true" ignorepausetimeforenhancedtn="true" name="connect" pausetime="300" promptall="true" supressclearevents="false" timeout="60000" usevars="false">
+
+    <screen entryscreen="true" exitscreen="false" name="Screen1" transient="false">
+        <comment>
+            !visualinfo:x=27;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.GeneralScreenPropertiesPage;associatedScreenName=connect\Screen1.hsc;y=27;!
+        </comment>
+        <description uselogic="1 and 2">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <block casesense="false" col="26" invertmatch="false" optional="false" row="6"> 
+          <string value="       //  OOOOOOO   "/>
+          <string value="      //  OO    OO SS"/>
+          <string value="zzzz //  OO    OO SS "/>
+          <string value="zz  //  OO    OO SSSS"/>
+          <string value="   //  OO    OO      "/>
+          <string value="  //  OO    OO      S"/>
+               </block> 
+        </description>
+        <actions>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="l cicsts53[enter]" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="Screen2"/>
+        </nextscreens>
+    </screen>
+
+    <screen entryscreen="false" exitscreen="false" name="Screen2" transient="false">
+        <comment>
+            !visualinfo:x=27;showActions=1;lastPropertiesPage=com.ibm.hats.vme.properties.ScreenActionsPropertiesPage;associatedScreenName=connect\Screen2.hsc;y=133;!
+        </comment>
+        <description uselogic="1 and (2 and 3 and 4)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <cursor col="26" invertmatch="false" optional="false" row="10"/>
+            <numfields invertmatch="false" number="30" optional="false"/>
+            <numinputfields invertmatch="false" number="5" optional="false"/>
+        </description>
+        <actions>
+            <prompt assigntovar="" clearfield="false" col="0" default="" description="" encrypted="false" len="80" movecursor="false" name="userId" required="false" row="0" title="" varupdateonly="false" xlatehostkeys="true"/>
+            <input col="0" encrypted="true" enhancedEncryption="true" movecursor="true" row="0" value="78AEEFE1A0B5E2780195473CB31FF1D0" xlatehostkeys="true"/>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="[enter]" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="Screen3"/>
+        </nextscreens>
+    </screen>
+
+    <screen entryscreen="false" exitscreen="false" name="Screen3" transient="false">
+        <comment>
+            !visualinfo:x=27;showActions=1;associatedScreenName=connect\Screen3.hsc;y=279;!
+        </comment>
+        <description uselogic="1 and (2 and 3 and 4)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <cursor col="1" invertmatch="false" optional="false" row="1"/>
+            <numfields invertmatch="false" number="3" optional="false"/>
+            <numinputfields invertmatch="false" number="2" optional="false"/>
+        </description>
+        <actions>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="hcaz[enter]" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="Screen4"/>
+        </nextscreens>
+    </screen>
+
+    <screen entryscreen="false" exitscreen="true" name="Screen4" transient="false">
+        <comment>
+            !visualinfo:x=27;showActions=1;associatedScreenName=connect\Screen4.hsc;y=385;!
+        </comment>
+        <description uselogic="1 and 2">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <block casesense="false" col="20" invertmatch="false" optional="false" row="1"> 
+          <string value="     Health Care Provider Menu   - July  "/>
+          <string value="                                         "/>
+          <string value="                                         "/>
+          <string value="                                         "/>
+               </block> 
+        </description>
+        <actions>
+        </actions>
+        <nextscreens timeout="0">
+        </nextscreens>
+    </screen>
+
+</HAScript>
+</macro>

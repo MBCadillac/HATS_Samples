@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Class-Path: HatsService.jar 
+ bidibean.jar 
+ habeansnlv2.jar 
+ WFCommon.jar 
+ hasslite.jar 
+ hatscommon.jar 
+ hatsruntime.jar 
+ hodwel.jar 
+ ibmjlog.jar 
+ hsrendering.jar 
+ hostsim.jar
+

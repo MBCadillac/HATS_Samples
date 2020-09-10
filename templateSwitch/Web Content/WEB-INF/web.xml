@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+	<display-name>templateSwitch</display-name>
+	<context-param>
+		<param-name>showStudioRuntimeMessages</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<description>
+		The location where state information is saved.
+Valid values are 'server' (typically saved in HttpSession) and 'client' (typically
+saved as a hidden field in the form.
+Default is server.</description>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>server</param-value>
+	</context-param>
+	<context-param>
+		<description>
+		Comma-delimited list of context-relative resource paths under which the JSF implementation
+will look for application configuration resources, before loading a configuration resource
+named /WEB-INF/faces-config.xml (if such a resource exists).</description>
+		<param-name>javax.faces.CONFIG_FILES</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<description>
+		The default suffix for extension-mapped resources that contain JSF components.
+Default is '.jsp'.</description>
+		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+		<param-value>.jsp</param-value>
+	</context-param>
+	<context-param>
+		<description>
+		Monitors Faces JSP files for modifications and synchronizes a running server with
+the changes without restarting the server. If this parameter is set to false or
+removed from the deployment descriptor, any changes made to Faces JSP files may
+not be seen by the server until it is restarted. This parameter is usually set
+to true while the Faces JSP files are being developed and debugged in order to
+improve the performance of the development environment.</description>
+		<param-name>com.ibm.ws.jsf.JSP_UPDATE_CHECK</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<description>
+		Load JSF runtime when the application server starts up. If this parameter is set to false or removed,
+JSF runtime will be loaded and initialized when the first JSF request is processed.
+This may disable custom JSF extensions, such as factories defined in the project.</description>
+		<param-name>com.ibm.ws.jsf.LOAD_FACES_CONFIG_AT_STARTUP</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<filter>
+		<description>
+		Provides compression for output from HATS entry servlet</description>
+		<display-name>CompressionFilter</display-name>
+		<filter-name>CompressionFilter</filter-name>
+		<filter-class>com.ibm.hats.runtime.filters.CompressionFilter</filter-class>
+		<async-supported>false</async-supported>
+	</filter>
+	<filter>
+		<description>
+		This filter will invoke to validate csrf attack </description>
+		<display-name>HatsCSRFValidationFilter</display-name>
+		<filter-name>HatsCSRFValidationFilter</filter-name>
+		<filter-class>com.ibm.hats.runtime.filters.HatsCSRFValidationFilter</filter-class>
+		<async-supported>false</async-supported>
+		<init-param>
+			<param-name>source.origin</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>target.origin</param-name>
+			<param-value></param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<description>
+		This filter will invoke to create security header for hats </description>
+		<display-name>HatsHeaderSecurityFilter</display-name>
+		<filter-name>HatsHeaderSecurityFilter</filter-name>
+		<filter-class>com.ibm.hats.runtime.filters.HatsHeaderSecurityFilter</filter-class>
+		<async-supported>false</async-supported>
+		<init-param>
+			<param-name>Content-Security-Policy</param-name>
+			<param-value>NO</param-value>
+		</init-param>
+		<init-param>
+			<param-name>X-XSS-Protection</param-name>
+			<param-value>NO</param-value>
+		</init-param>
+		<init-param>
+			<param-name>X-Content-Type-Options</param-name>
+			<param-value>NO</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>
+		</url-pattern>
+		<servlet-name>EntryServlet</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>
+		/</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CompressionFilter</filter-name>
+		<url-pattern>
+		/index.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HatsCSRFValidationFilter</filter-name>
+		<url-pattern>
+		/</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HatsCSRFValidationFilter</filter-name>
+		<url-pattern>
+		/index.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HatsCSRFValidationFilter</filter-name>
+		<url-pattern>
+		/entry</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HatsCSRFValidationFilter</filter-name>
+		<url-pattern>
+		/hatsadmin/admin</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>HatsHeaderSecurityFilter</filter-name>
+		<url-pattern>
+		</url-pattern>
+	</filter-mapping>
+	<servlet id="Servlet_1">
+		<display-name>entry</display-name>
+		<servlet-name>EntryServlet</servlet-name>
+		<servlet-class>com.ibm.hats.runtime.EntryServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet id="Servlet_3">
+		<display-name>CalendarServlet</display-name>
+		<servlet-name>CalendarServlet</servlet-name>
+		<servlet-class>com.ibm.hats.runtime.CalendarServlet</servlet-class>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet id="Servlet_4">
+		<display-name>AsynchPageServlet</display-name>
+		<servlet-name>AsynchPageServlet</servlet-name>
+		<servlet-class>com.ibm.hats.runtime.AsynchPageServlet</servlet-class>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet id="Servlet_5">
+		<display-name>SpreadsheetGeneratorServlet</display-name>
+		<servlet-name>SpreadsheetGeneratorServlet</servlet-name>
+		<servlet-class>com.ibm.hats.runtime.SpreadsheetGeneratorServlet</servlet-class>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>-1</load-on-startup>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>
+		*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EntryServlet</servlet-name>
+		<url-pattern>
+		/entry</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CalendarServlet</servlet-name>
+		<url-pattern>
+		/calendar</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AsynchPageServlet</servlet-name>
+		<url-pattern>
+		/asynch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SpreadsheetGeneratorServlet</servlet-name>
+		<url-pattern>
+		/SpreadsheetGenerator</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>
+		/faces/*</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>hats.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/hats.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/classes/tld/hats.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/hats.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

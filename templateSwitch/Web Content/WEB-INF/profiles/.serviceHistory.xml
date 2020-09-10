@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><servicehistory>
+   <action date="May 8, 2020 10:06:49 AM EDT" type="create">
+      <plugin id="com.ibm.hats" version="9.7.0.201902161414"/>
+      <plugin id="com.ibm.hats.core" version="9.7.0.201902161414"/>
+      <plugin id="com.ibm.hsrendering" version="9.7.0.201902161414"/>
+      <plugin id="com.ibm.eNetwork.beans.HOD" version="13.0.1.20180801011"/>
+      <plugin id="com.ibm.etools.terminal.beans" version="4.0.0.20180801011"/>
+   </action>
+</servicehistory>

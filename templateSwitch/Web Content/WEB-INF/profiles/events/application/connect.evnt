@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><event description="" type="connect">
+   <actions>
+      <obtain enabled="true"/>
+      <set dec="0" enabled="true" index="-1" name="change" op="concatenate" op1="" op1_index="-1" op1_shared="false" op1_type="string" op2="" op2_index="-1" op2_shared="false" op2_type="string" overwrite="true" shared="false" type="string" value="no"/>
+   </actions>
+</event>

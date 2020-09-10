@@ -1,0 +1,596 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+@import url(commontheme.css);
+@import url(inlineCalendar.css);
+
+
+/* research template specific additions to inlineCalendar */
+table.calendar {
+	background-color: white;
+	border: 2px solid #D0EBF0;
+	margin-top: 5px;
+}
+
+.focusDefaultDay,.day {
+	border-right: 1px solid #ded;
+}
+
+.focusDay {
+	border: 2px solid #bdc;
+}
+
+td.focusDay a {
+	color: black;
+	text-decoration: none;
+}
+
+/* end inlineCalendar modifications */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial,Helvetica,sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	text-align: center;
+	color: #333a42;
+}
+
+/* Layout & navigation classes */
+.r_COMPANYTITLE {
+	color: #1A6699;
+	padding: 20px;
+	font-size: 2.5em;
+	width:792px;
+}
+
+#r_wrapper {
+	margin: auto;
+	text-align: left;
+}
+
+#r_logo {
+	height: 86px;
+	background: url(../images/research/main_logo.jpg) top right no-repeat;
+}
+
+#r_content {
+	margin: auto;
+	text-align: left;
+	padding: 20px;
+	width: 792px;
+}
+
+#r_lvl1nav {
+	font-weight: bold;
+}
+
+#r_lvl1nav a {
+	white-space:  nowrap;
+}
+#r_lvl1nav_list {
+	white-space:  nowrap;
+	padding: 0px;
+	height: 48px;
+	background: url(../images/research/lvl1nav_bg.jpg) repeat-x #39a2ce;
+	margin: 0;
+}
+#r_lvl1nav ul {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+.r_lvl1nav_item {
+	display: inline;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	position: relative;
+	z-index: 1 !important;
+	background-image: url(../images/research/transparent.gif);
+}
+
+.r_lvl1nav_item a {
+	color: #1F4A73 !important;
+	padding: 0 20px;
+	text-decoration: none;
+	line-height: 32px;
+	font-weight: bold;
+}
+
+.r_lvl1nav_item ul {
+	border: none;
+	position: absolute;
+	left: 0;
+	padding: 10px;
+	margin: 0px 0px;
+	margin-left: -9999px;
+	z-index: 2 !important;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0px 2px 10px grey;
+	-webkit-box-shadow: 0px 2px 10px grey;
+	box-shadow: 0px 2px 10px grey;
+}
+
+.r_lvl1nav_hover_item ul { 
+	border: none;
+	margin-left: 0px;
+	margin-top: -3px;
+	background: url(../images/research/lvl2nav_bg.jpg) repeat-x #1F4C73;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+}
+
+.r_lvl1nav_hover_item a {
+	color: #FFF !important;
+}
+
+.r_lvl1nav_item ul a {
+	color: #FFF !important;
+	padding: 0;
+	border: 0;
+	text-transform: none;
+}
+#r_lvl1nav_left {
+	background: url(../images/research/lvl1nav_left.jpg) top left no-repeat;
+}
+
+#r_lvl1nav_right {
+	background: url(../images/research/lvl1nav_right.jpg) top right no-repeat;
+}
+
+/* Links */
+A.HATSLINK:link,A.HATSLINK:visited,A.ApplicationKeyLink:link,A.ApplicationKeyLink:visited,A.HostKeyLink:link,A.HostKeyLink:visited,a.HATSLINK:active,.calendar a:active,.calendar a:link,.calendar a:visited {
+	font-weight: normal;
+	color: #5092BB;
+}
+a.HATSPROTLINK:link,a.HATSPROTLINK:visited {
+	text-decoration: none;
+	color: inherit;
+}
+a.HATSLINK:hover,A.ApplicationKeyLink:hover,A.HostKeyLink:hover,.calendar a:hover,.calendar a:focus,a.HATSPROTLINK:hover {
+	text-decoration: underline;
+	color: #296399;
+}
+
+/* fields */
+
+input.HATSINPUT,input.HF,
+input.HLWHITE,input.HWHITE,input.RHWHITE,
+input.HLBROWN,input.HBROWN,input.RHBROWN,
+input.HLBLUE,input.HBLUE,input.RHBLUE,
+input.HLRED,input.HRED,input.RHRED,
+input.HLCYAN,input.HCYAN,input.RHCYAN,
+input.HLMAGENTA,input.HMAGENTA,input.RHMAGENTA,
+input.HLGREEN,input.HGREEN,input.RHGREEN,
+input.HLYELLOW,input.HYELLOW,input.RHYELLOW,
+input.HLGRAY,input.HGRAY,input.RHGRAY,
+input.HLBLANK,input.HBLANK,input.RHBLANK,#r_content textarea {
+	color: #22517D;
+	border: 1px solid #4994CC;
+	background: url(../images/research/input_normal_bg.png) repeat-x #fff;
+}
+
+input.HATSINPUT:focus,.HATSFOCUSED,input.HF:focus,
+input.HLWHITE:focus,input.HWHITE:focus,input.RHWHITE:focus,
+input.HLBROWN:focus,input.HBROWN:focus,input.RHBROWN:focus,
+input.HLBLUE:focus,input.HBLUE:focus,input.RHBLUE:focus,
+input.HLRED:focus,input.HRED:focus,input.RHRED:focus,
+input.HLCYAN:focus,input.HCYAN:focus,input.RHCYAN:focus,
+input.HLMAGENTA:focus,input.HMAGENTA:focus,input.RHMAGENTA:focus,
+input.HLGREEN:focus,input.HGREEN:focus,input.RHGREEN:focus,
+input.HLYELLOW:focus,input.HYELLOW:focus,input.RHYELLOW:focus,
+input.HLGRAY:focus,input.HGRAY:focus,input.RHGRAY:focus,
+input.HLBLANK:focus,input.HBLANK:focus,input.RHBLANK:focus,#r_content textarea:focus {
+	background: url(../images/research/input_focused_bg.png) repeat-x;
+}
+
+.inputInhibited {
+	color: #c00000;
+	font: bold;
+}
+
+.HDF { /* Disabled field */
+	color: #D2CED3;
+}
+
+/* Style Definition for all widgets with color mapping enabled (Hcolor)  */
+/* These color map the terminal fields foreground colors to these .html  */
+/* color and attributes.                                                 */
+.HLWHITE,input.HLWHITE,.HWHITE,input.HWHITE,
+.HLBROWN,input.HLBROWN,.HBROWN,input.HBROWN,
+.HLBLUE,input.HLBLUE,.HBLUE,input.HBLUE,
+.HLRED,input.HLRED,.HRED,input.HRED,
+.HLCYAN,input.HLCYAN,.HCYAN,input.HCYAN,
+.HLMAGENTA,input.HLMAGENTA,.HMAGENTA,input.HMAGENTA,
+.HLGREEN,input.HLGREEN,.HGREEN,input.HGREEN,
+.HLYELLOW,input.HLYELLOW,.HYELLOW,input.HYELLOW,
+.HLGRAY,input.HLGRAY,.HGRAY,input.HGRAY,
+.HLBLANK,input.HLBLANK,.HBLANK,input.HBLANK {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLWHITE,input.HLWHITE,.HLBROWN,input.HLBROWN,
+.HLBLUE,input.HLBLUE,.HLRED,input.HLRED,
+.HLCYAN,input.HLCYAN,.HLMAGENTA,input.HLMAGENTA,
+.HLGREEN,input.HLGREEN,.HLYELLOW,input.HLYELLOW,
+.HLGRAY,input.HLGRAY,.HLBLANK,input.HLBLANK {
+	font-weight: bold;
+}
+
+.HBLUE,input.HBLUE,.HLBLUE,input.HLBLUE {
+	color: #2323dc;
+}
+
+.HGREEN,input.HGREEN,.HLGREEN,input.HLGREEN {
+	color: #333a42;
+}
+
+.HRED,input.HRED,.HLRED,input.HLRED {
+	color: #FE0000;
+}
+
+.HWHITE,input.HWHITE,.HLWHITE,input.HLWHITE {
+	color: #226f41;
+}
+
+.HCYAN,input.HCYAN,.HLCYAN,input.HLCYAN {
+	color: #95C4EC;
+}
+
+.HMAGENTA,input.HMAGENTA,.HLMAGENTA,input.HLMAGENTA {
+	color: #2982CF;
+}
+
+.HGRAY,input.HGRAY,.HLGRAY,input.HLGRAY {
+	color: #675777;
+}
+
+.HYELLOW,input.HYELLOW,.HLYELLOW,input.HLYELLOW,
+.HBROWN,input.HBROWN,.HLBROWN,input.HLBROWN {
+	color: #538BA4; 
+}
+
+.RHBLANK,.RHBLUE,.RHGREEN,.RHRED,.RHCYAN,.RHWHITE,.RHMAGENTA,.RHBROWN,.RHYELLOW,.RHGRAY {
+	color: white !important;
+}
+
+.RHBLANK {
+	background-color: #222222 !important;
+}
+.RHBLUE{
+	background-color: #2323dc !important;
+}
+.RHGREEN {
+	background-color: #333a42 !important;
+}
+.RHRED {
+	background-color: #FE0000 !important;
+}
+.RHCYAN {
+	background-color:#95C4EC !important;
+}
+.RHWHITE {
+	background-color: #226f41 !important;
+}
+.RHMAGENTA{
+	background-color: #2982CF !important;
+}
+.RHBROWN,.RHYELLOW{
+	background-color: #538BA4 !important;
+}
+.RHGRAY{
+	background-color: #675777 !important;
+}
+	
+	
+/* table classes */ 
+.MASTERTABLE {
+	border: solid #cccccc 1px;
+}
+
+TABLE.HATSTABLE {
+	border-collapse: collapse;
+	margin: 10px;
+}
+
+.HATSTABLEHEADER {
+	font-weight: bold;
+	padding: 2px 5px;
+	text-align: center;
+}
+
+.HATSTABLEODDROW,.day {
+	background-color: #E8F8FF;
+}
+
+.HATSTABLEEVENROW {
+	background-color: #F8F8FF;
+}
+
+td.HATSTABLECELL {
+	border-right: 1px solid #DFE6D5;
+	border-left: 1px solid #DFE6D5;
+	padding: 2px 5px;
+	white-space: nowrap;
+}
+
+tr.HATSTABLEEVENROW:hover,tr.HATSTABLEODDROW:hover,td.day:hover,.focusDefaultDay,.focusDay {
+	background-color: #d0ebf0;
+}
+
+td.HATSTABLECAPTIONCELL {
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+	padding: 4px;
+}
+
+table.HATSFIELDTABLE {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+/* interactive control classes */
+INPUT.HATSBUTTON {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+SELECT.HATSDROPDOWN {
+	font-family: Arial,Tahoma,Helvetica,sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+/* static text classes */
+
+.HATSBUTTONTABLECELL {
+	padding: 4px;
+}
+
+/* popup classes */
+DIV.HATSPOPUP {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 150px;
+	height: 170px;
+	overflow: auto;
+	background-color:#95C4EC;
+	border:1px solid #1F4C73;
+	z-index: 5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 0px 1px 3px #557;
+	-webkit-box-shadow: 0px 1px 3px #557;
+	box-shadow: 0px 1px 3px #557;
+}
+
+TABLE.HATSPOPUPTABLE {
+	border: 0px;
+	width: 100%;
+}
+.HATSPOPUP td {
+	border: 0px;
+}
+TH.HATSPOPUPTH,.HATSPOPUP th {
+	background:url(../images/research/modal_box_title_bg.jpg) repeat-x scroll 0 0;
+	color:#FFFFFF;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	text-align: right;
+}
+.HATSPOPUPTH A.HATSLINK:link, .HATSPOPUPTH A.HATSLINK:visited,.HATSPOPUP th A.HATSLINK:link, .HATSPOPUP th A.HATSLINK:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.HATSPOPUPTH A.HATSLINK:hover,.HATSPOPUP th a.HATSLINK:hover{
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+A.HATSPOPUPITEMLINK:link,A.HATSPOPUPITEMLINK:visited {
+	color: #1F4A73;
+	text-decoration: underline;
+}
+
+A.HATSPOPUPITEMLINK:hover {
+	color: #0F2A53;
+}
+
+
+/* Dialogs */
+.HWF .HATSTABLE {
+	border: none;
+}
+
+#HWF_TOPLEFT,#HWF_TOP,#HWF_TOPRIGHT,
+#HWF_LEFT,#HWF_RIGHT,#HWF_BOTTOMLEFT,
+#HWF_BOTTOM,#HWF_BOTTOMRIGHT {
+	border-color: #1F4C73 !important;
+	border-width: 1px !important;
+}
+
+#HWF_TOPLEFT {
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#HWF_TOP,#HWF_TOPRIGHT,#HWF_TOPLEFT,.hatsCalendarCloseBar {
+	background: #4A8AAD url(../images/research/modal_box_title_bg.jpg)
+		repeat-x bottom;
+}
+
+#HWF_TOP td {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#HWF_TOPRIGHT {
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#HWF_BOTTOMLEFT {
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#HWF_BOTTOMRIGHT {
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/* Status pages */
+.HATSSTATUSHEADER {
+	/* For accessibility compliance: change following value to 180% */
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.HATSSTATUSFOOTER,.HATSFOOTERSTATUSHEADER,.HATSFOOTERSTATUSINFO {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.HATSFOOTERSTATUSHEADER pre {
+	white-space: normal;
+	word-wrap: break-word;
+}
+/* Portlet status classes */
+td.INFO, h1.predefined {
+	background-color: transparent !important;
+}
+
+
+/* keypad dropdowns */
+select.ApplicationDropDown,select.HostDropDown {
+	font-family: arial,tahoma,helvetica,sans-serif;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+/* keypad tables */
+/* Buttons and host application / operator area / keypad */
+input.ApplicationButton,input.HostButton,input.HostPFKey {
+	background: url(../images/research/button_bg.jpg) repeat #528ea5;
+	height: 23px;
+	border: 1px solid #528ea5;
+	padding: 0 2px 4px 2px;
+	color: #FFF;
+	font-weight: bold;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input.HATSBUTTON[type="button"]{
+	background: url(../images/research/button_bg.jpg) repeat #528ea5;
+	height: 23px;
+	border: 1px solid #528ea5;
+	padding: 0 2px 4px 2px;
+	color: #FFF;
+	font-weight: bold;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.appKeypad {
+	text-align: center;
+}
+
+table.ApplicationKeypad {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+table.HostKeypad {}
+
+.HostKeypad {
+	text-align: center;
+}
+
+.statusArea {}
+
+DIV.statusArea {
+	border-top: 1px solid #cccccc;
+}
+
+TABLE.statusArea {}
+
+.HCURSORINDICATOR {
+	background-color: red;
+	text-decoration: underline;
+	font: bold;
+	color: white;
+}
+
+.HF {
+	font-family: courier new, monospace;
+}
+
+/* General HTML classes */
+#r_content ul {
+	margin-left: 20px;
+	list-style-image: url(../images/research/bullet.gif);
+}
+
+td,p,input,select,th {
+	font-family: arial,tahoma,helvetica,sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+select > option {
+	-moz-padding-end:5px;
+	-moz-padding-start:3px;
+}
+
+tt { /* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+#r_content h1 {
+	width: 100%;
+	color: #69C;
+	font-size: 24px;
+	border-bottom: 2px solid #0975C6;
+}
+
+#r_content h2 {
+	color: #69C;
+	font-size: 18px;
+}
+
+#r_content h3 {
+	color: #69C;
+	font-size: 14px;
+}
+
+#r_content hr {
+	height: 1px;
+	background: #77D2FF;
+	margin: 10px 0px;
+}

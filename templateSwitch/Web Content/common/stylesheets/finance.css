@@ -1,0 +1,633 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+@import url(commontheme.css);
+@import url(inlineCalendar.css);
+
+/* finance template specific additions to inlineCalendar */
+.hatsCalendarCloseBar {
+	background: #428A52 url(../images/finance/lvl1nav_bg_normal.jpg)
+		repeat-x;
+}
+
+.focusDefaultDay, .day {
+	border-right: 1px solid #fff;
+}
+
+.focusDay {
+	border: 2px solid #bdc;
+}
+
+td.focusDay a {
+	color: black;
+	text-decoration: none;
+}
+/* end inlineCalendar modifications */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: #EEE;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	color: #333333;
+}
+
+/* Header */
+#header {
+	display: inline-block;
+	text-align: center;
+}
+
+/* Main */
+#main {
+	min-width: 812px;
+	clear: both;
+	background: url(../images/finance/content_bg.jpg) #FFF repeat-x bottom
+		left;
+	border: 1px solid #AAA;
+	border-top: none;
+	padding: 5px 0 10px;
+	display: inline-block;
+}
+
+.transformation {
+	display: inline-block;
+}
+
+.oia {
+	text-align: left;
+	display: inline;
+}
+
+/* Layout & navigation classes */
+.f_COMPANYTITLE {
+	color: white;
+	padding: 20px;
+	font: bold 2em Arial, Helvetica, sans-serif;
+	width: 772px;
+}
+
+#f_logo {
+	text-align: left;
+	height: 79px;
+	background: url(../images/finance/main_logo.jpg) top right no-repeat
+		#9EC79D;
+	border: 1px solid #aaaaaa;
+	border-bottom: none;
+	margin: auto;
+}
+
+#f_content {
+	margin: auto;
+	width: 812px;
+}
+
+#f_lvl1nav_list ul {
+	list-style-type: none;
+	list-style-image: none;
+	text-align: left;
+}
+
+#f_lvl1nav_list a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#f_lvl1nav_list li ul a {
+	font-weight: normal;
+}
+
+#f_lvl1nav_list li ul a:hover {
+	text-decoration: underline;
+}
+
+.f_lvl1nav_separator {
+	border: 1px solid #AAA;
+	border-bottom: none;
+	border-top: none;
+	height: 24px;
+	background: url(../images/finance/lvl1nav_border_bottom.jpg) repeat-x;
+	margin: 0 auto;
+	width: 812px;
+}
+
+#f_lvl1nav_list {
+	float: right;
+	margin: -39px 0px;
+}
+
+.f_lvl1nav_item {
+	float: left;
+	color: #FFF;
+	font-weight: bold;
+	background: url(../images/finance/lvl1nav_bg_normal.jpg) repeat-x;
+	line-height: 26px;
+	padding: 0 40px;
+	margin: 0 3px;
+	position: relative;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	display: inline;
+}
+
+.f_lvl1nav_item_hover {
+	background: url(../images/finance/lvl1nav_bg_over.jpg) repeat-x;
+}
+
+.f_lvl1nav_item ul {
+	background-color: #6D9EC5;
+	position: absolute;
+	right: 0;
+	top: 26px;
+	width: 200px;
+	padding: 10px 10px 10px 20px;
+	font-weight: normal;
+	z-index: 2 !important;
+	margin-top: -9999px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-box-shadow: 5px 5px 10px grey;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-box-shadow: 5px 5px 10px grey;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 5px 5px 10px grey;
+}
+
+.f_lvl1nav_item_hover ul {
+	margin-top: 0px;
+}
+
+/* Links */
+A.HATSLINK:link, A.HATSLINK:visited, A.ApplicationKeyLink:link, A.ApplicationKeyLink:visited,
+	A.HostKeyLink:link, A.HostKeyLink:visited, a.HATSLINK:active, .calendar a:active,
+	.calendar a:link, .calendar a:visited {
+	color: #4279a6;
+	text-decoration: underline;
+}
+
+a.HATSPROTLINK:link, a.HATSPROTLINK:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.HATSLINK:hover, A.ApplicationKeyLink:hover, A.HostKeyLink:hover,
+	.calendar a:hover, .calendar a:focus, a.HATSPROTLINK:hover {
+	text-decoration: underline;
+	color: #397900;
+}
+
+/* fields */
+input.HATSINPUT, input.HF, input.HLWHITE, input.HWHITE, input.RHWHITE,
+	input.HLBROWN, input.HBROWN, input.RHBROWN, input.HLBLUE, input.HBLUE,
+	input.RHBLUE, input.HLRED, input.HRED, input.RHRED, input.HLCYAN, input.HCYAN,
+	input.RHCYAN, input.HLMAGENTA, input.HMAGENTA, input.RHMAGENTA, input.HLGREEN,
+	input.HGREEN, input.RHGREEN, input.HLYELLOW, input.HYELLOW, input.RHYELLOW,
+	input.HLGRAY, input.HGRAY, input.RHGRAY, input.HLBLANK, input.HBLANK,
+	input.RHBLANK, #f_content textarea {
+	border: 1px solid #999;
+	background: #FFF url(../images/finance/input_normal_bg.png) repeat-x;
+	margin-bottom: 1px;
+}
+
+input.HATSINPUT:focus, .HATSFOCUSED, input.HF:focus, input.HLWHITE:focus,
+	input.HWHITE:focus, input.RHWHITE:focus, input.HLBROWN:focus, input.HBROWN:focus,
+	input.RHBROWN:focus, input.HLBLUE:focus, input.HBLUE:focus, input.RHBLUE:focus,
+	input.HLRED:focus, input.HRED:focus, input.RHRED:focus, input.HLCYAN:focus,
+	input.HCYAN:focus, input.RHCYAN:focus, input.HLMAGENTA:focus, input.HMAGENTA:focus,
+	input.RHMAGENTA:focus, input.HLGREEN:focus, input.HGREEN:focus, input.RHGREEN:focus,
+	input.HLYELLOW:focus, input.HYELLOW:focus, input.RHYELLOW:focus, input.HLGRAY:focus,
+	input.HGRAY:focus, input.RHGRAY:focus, input.HLBLANK:focus, input.HBLANK:focus,
+	input.RHBLANK:focus, #f_content textarea:focus {
+	background: #FFF url(../images/finance/input_focused_bg.png) repeat-x;
+}
+
+.inputInhibited {
+	color: #c00000;
+	font: bold;
+}
+
+.HDF { /* Disabled field */
+	color: #cccccc;
+}
+
+/* Style Definition for all widgets with color mapping enabled (Hcolor)  */
+/* These color map the terminal fields foreground colors to these .html  */
+/* color and attributes.                                                 */
+.HLWHITE, input.HLWHITE, .HWHITE, input.HWHITE, .HLBROWN, input.HLBROWN,
+	.HBROWN, input.HBROWN, .HLBLUE, input.HLBLUE, .HBLUE, input.HBLUE,
+	.HLRED, input.HLRED, .HRED, input.HRED, .HLCYAN, input.HLCYAN, .HCYAN,
+	input.HCYAN, .HLMAGENTA, input.HLMAGENTA, .HMAGENTA, input.HMAGENTA,
+	.HLGREEN, input.HLGREEN, .HGREEN, input.HGREEN, .HLYELLOW, input.HLYELLOW,
+	.HYELLOW, input.HYELLOW, .HLGRAY, input.HLGRAY, .HGRAY, input.HGRAY,
+	.HLBLANK, input.HLBLANK, .HBLANK, input.HBLANK {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLWHITE, input.HLWHITE, .HLBROWN, input.HLBROWN, .HLBLUE, input.HLBLUE,
+	.HLRED, input.HLRED, .HLCYAN, input.HLCYAN, .HLMAGENTA, input.HLMAGENTA,
+	.HLGREEN, input.HLGREEN, .HLYELLOW, input.HLYELLOW, .HLGRAY, input.HLGRAY,
+	.HLBLANK, input.HLBLANK {
+	font-weight: bold;
+}
+
+.HBLUE, input.HBLUE, .HLBLUE, input.HLBLUE {
+	color: #4279A6;
+}
+
+.HGREEN, input.HGREEN, .HLGREEN, input.HLGREEN {
+	color: #333333;
+}
+
+.HRED, input.HRED, .HLRED, input.HLRED {
+	color: #900107;
+}
+
+.HWHITE, input.HWHITE, .HLWHITE, input.HLWHITE {
+	color: #059681;
+}
+
+.HCYAN, input.HCYAN, .HLCYAN, input.HLCYAN {
+	color: #0596B1;
+}
+
+.HMAGENTA, input.HMAGENTA, .HLMAGENTA, input.HLMAGENTA {
+	color: #436E7F;
+}
+
+.HBROWN, input.HBROWN, .HLBROWN, input.HLBROWN, .HYELLOW, input.HYELLOW,
+	.HLYELLOW, input.HLYELLOW {
+	color: #747900;
+}
+
+.HGRAY, input.HGRAY, .HLGRAY, input.HLGRAY {
+	color: #555555;
+}
+
+.RHBLANK, .RHBLUE, .RHGREEN, .RHRED, .RHCYAN, .RHWHITE, .RHMAGENTA,
+	.RHBROWN, .RHYELLOW, .RHGRAY {
+	color: white !important;
+}
+
+.RHBLANK {
+	background-color: #222 !important;
+}
+
+.RHBLUE {
+	background-color: #4279A6 !important;
+}
+
+.RHGREEN {
+	background-color: #333 !important;
+}
+
+.RHRED {
+	background-color: #900107 !important;
+}
+
+.RHCYAN {
+	background-color: #0596B1 !important;
+}
+
+.RHWHITE {
+	background-color: #059681 !important;
+}
+
+.RHMAGENTA {
+	background-color: #436E7F !important;
+}
+
+.RHBROWN, .RHYELLOW {
+	background-color: #747900 !important;
+}
+
+.RHGRAY {
+	background-color: #555555 !important;
+}
+/* table classes */
+.MASTERTABLE {
+	border: solid #cccccc 1px;
+}
+
+TABLE.HATSTABLE, table.calendar {
+	border-collapse: collapse;
+	border: 2px solid #AFAFAF;
+}
+
+.HATSTABLEHEADER, .dayOfWeek, .month, .year {
+	background: #FFFFFF url(../images/finance/input_normal_bg.png) repeat-x
+		0 0;
+	color: #5F5F5F;
+	font-weight: bold;
+	text-align: left;
+}
+
+.HATSTABLEEVENROW, .HATSTABLEODDROW, .day {
+	background-color: #e5eaef;
+	color: #505050;
+}
+
+.HATSTABLEEVENROW td, .HATSTABLEODDROW td {
+	padding: 2px;
+	border-bottom: 1px solid #FFF;
+}
+
+tr.HATSTABLEEVENROW:hover, tr.HATSTABLEODDROW:hover, td.day:hover,
+	.focusDefaultDay, .focusDay {
+	background-color: #d2e2ef;
+}
+
+td.HATSTABLECELL {
+	white-space: nowrap;
+}
+
+td.HATSTABLECAPTIONCELL {
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+	padding: 4px;
+}
+
+table.HATSFIELDTABLE {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+/* interactive control classes */
+INPUT.HATSBUTTON {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+SELECT.HATSDROPDOWN {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+/* static text classes */
+.HATSBUTTONTABLECELL {
+	padding: 4px;
+}
+
+/* popup classes */
+DIV.HATSPOPUP {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 150px;
+	height: 170px;
+	overflow: auto;
+	background-color: #85C1DB;
+	border: 1px solid #1F4C73;
+	z-index: 5;
+	-moz-border-radius: 8px;
+	-moz-box-shadow: 1px 1px 3px #557;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 1px 1px 3px #557;
+	border-radius: 8px;
+	box-shadow: 1px 1px 3px #557;
+}
+
+TABLE.HATSPOPUPTABLE {
+	border: 0px;
+	width: 100%;
+}
+
+.HATSPOPUP td {
+	border: 0px;
+}
+
+TH.HATSPOPUPTH, .HATSPOPUP th {
+	background-color: #436E7F;
+	color: #FFFFFF;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	text-align: right;
+}
+
+.HATSPOPUPTH A.HATSLINK, .HATSPOPUP th A.HATSLINK {
+	font-weight: bold;
+}
+
+.HATSPOPUPTH A.HATSLINK:link, .HATSPOPUPTH A.HATSLINK:visited, A.HATSPOPUPITEMLINK:link,
+	A.HATSPOPUPITEMLINK:visited, .HATSPOPUP th A.HATSLINK:link, .HATSPOPUP th A.HATSLINK:visited
+	{
+	color: white;
+	text-decoration: none;
+}
+
+.HATSPOPUPTH A.HATSLINK:hover, A.HATSPOPUPITEMLINK:hover, .HATSPOPUP th A.HATSLINK:hover
+	{
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+/* Dialogs */
+.HWF .HATSTABLE {
+	border: none;
+}
+
+#HWF_TOPLEFT {
+	background-color: #436E7F;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#HWF_TOP {
+	background-color: #436E7F;
+}
+
+#HWF_TOP .HATSFIELD {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#HWF_TOPRIGHT {
+	background-color: #436E7F;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#HWF_BOTTOMLEFT {
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#HWF_BOTTOM {
+}
+
+#HWF_BOTTOMRIGHT {
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/* Status pages */
+.HATSSTATUSTABLE {
+	min-width: 812px;
+	padding: 6px;
+	text-align: left;
+}
+
+.HATSSTATUSHEADER {
+	/* For accessibility compliance: change following value to 180% */
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.HATSSTATUSFOOTER, .HATSFOOTERSTATUSHEADER, .HATSFOOTERSTATUSINFO {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.HATSFOOTERSTATUSHEADER pre {
+	white-space: normal;
+	word-wrap: break-word;
+}
+/* Portlet status classes */
+td.INFO, h1.predefined {
+	background-color: transparent !important;
+}
+
+/* keypad dropdowns */
+select.ApplicationDropDown, select.HostDropDown {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+/* keypad tables */
+/* Buttons and host application / operator area / keypad */
+input.ApplicationButton, input.HostButton, input.HostPFKey {
+	background: url(../images/finance/button_bg.jpg) repeat-x;
+	height: 22px;
+	padding: 1px 3px 4px 1px;
+	color: #FFF;
+	font-weight: bold;
+	border: #718B80 solid 1px;
+	color: white;
+	background-color: #408080;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+input.HATSBUTTON[type="button"] {
+	background: url(../images/finance/button_bg.jpg) repeat-x;
+	height: 22px;
+	padding: 1px 3px 4px 1px;
+	color: #FFF;
+	font-weight: bold;
+	border: #718B80 solid 1px;
+	color: white;
+	background-color: #408080;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+
+.appKeypad {
+	text-align: center;
+}
+
+table.ApplicationKeypad {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+table.HostKeypad {
+}
+
+.HostKeypad {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.statusArea {
+}
+
+DIV.statusArea {
+	border-top: 1px solid #cccccc;
+	margin: 2px 10px 0;
+}
+
+TABLE.statusArea {
+	empty-cells: hide;
+}
+
+.cursorRowColumn {
+	text-align: right;
+}
+
+.HCURSORINDICATOR {
+	background-color: red;
+	text-decoration: underline;
+	font: bold;
+	color: white;
+}
+
+.HF {
+	font-family: "courier new", monospace;
+}
+
+/* General HTML classes */
+#f_content ul {
+	margin-left: 20px;
+	list-style-image: url(../images/finance/bullet.gif);
+}
+
+td, p, input, select, th {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+select>option {
+	-moz-padding-end: 5px;
+	-moz-padding-start: 3px;
+}
+
+tt { /* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+#f_content h1 {
+	color: #059681;
+	font-size: 24px;
+	border-bottom: 2px solid #436E7F;
+}
+
+#f_content h2 {
+	color: #059681;
+	font-size: 18px;
+}
+
+#f_content h3 {
+	color: #059681;
+	font-size: 14px;
+}
+
+#f_content hr {
+	height: 1px;
+	background: #397900;
+	margin: 10px 40px;
+}

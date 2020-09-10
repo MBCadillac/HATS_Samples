@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event description="" type="stop"><actions><show url="/stop.jsp" page="stop.jsp" /></actions></event>

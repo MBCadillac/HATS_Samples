@@ -1,0 +1,93 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+/* Reverse video color schema for use with grey background */
+
+.RHBLANK, input.RHBLANK{
+       color: #cccccc;
+       background-color: black;
+}
+
+.RHBLUE, input.RHBLUE {
+       color: #cccccc;
+       background-color: #555555;
+}
+
+.RHGREEN, input.RHGREEN {
+       color: #cccccc;
+       background-color: black;
+}
+
+.RHCYAN, input.RHCYAN {
+       color: #cccccc;
+       background-color: #444444;
+}
+
+.RHRED, input.RHRED {
+       color: #cccccc;
+       background-color: red;
+}
+
+.RHMAGENTA, input.RHMAGENTA {
+       color: #cccccc;
+       background-color: #555555;
+}
+
+.RHBROWN, input.RHBROWN {
+       color: #cccccc;
+       background-color: #555555;
+}
+
+.RHWHITE, input.RHWHITE {
+       color: #cccccc;
+       background-color: #888888;
+}
+
+.RHGRAY, input.RHGRAY {
+	color: #cccccc;
+	background-color: #555555;
+}
+
+.RHLBLUE, input.RHLBLUE {
+	font-family: courier new, monospace;
+	color: #cccccc;
+	background-color: #555555;
+}
+
+.RHLGREEN, input.RHLGREEN {
+	font-family: courier new, monospace;
+	color: #cccccc;
+	background-color: #888888;
+}
+
+
+.RHLCYAN, input.RHLCYAN {
+	font-family: courier new, monospace;	
+    color: #cccccc;
+	background-color: #666666;
+}
+
+.RHLRED, input.RHLRED {
+	font-family: courier new, monospace;	
+    color: #cccccc;
+	background-color: red;
+}
+
+.RHLMAGENTA, input.RHLMAGENTA {
+	font-family: courier new, monospace;	
+    color: #cccccc;
+	background-color: #555555;
+}
+
+.RHLYELLOW, input.RHLYELLOW {
+	font-family: courier new, monospace;	
+    color: #cccccc;
+	background-color: #666666;
+}
+
+
+.RHHWHITE, input.RHHWHITE {
+	font-family: courier new, monospace;	
+    color: #cccccc;
+	background-color: black;
+}

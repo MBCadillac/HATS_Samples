@@ -1,0 +1,529 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+@import url(commontheme.css);
+@import url(calendar.css);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* graytheme specific additions to inlineCalendar */
+table.calendar {
+	background-color: black;
+}
+
+.month, .year, .day {
+	background-color: #bbbbbb !important;
+}
+
+.hatsCalendarCloseBar, .dayOfWeek {
+	background-color: #888888 !important;
+}
+/* end inlineCalender modifications */
+BODY {
+	background-color: #cccccc;
+	color: black;
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	margin: 8px;
+}
+
+/* Header */
+#header {
+	background-color: #841412;
+    border: 4px solid #841412;
+    display: block;
+}
+
+/* Logo */
+#logo {
+	text-shadow: 1px 1px 0 #53534f;
+    margin-left: 10px;
+    text-align: left;
+    background-color: #841412;
+    background:  url(../images/Financial1TopBackground.jpg) no-repeat right;
+	background-size: 50% 80px;
+	background-origin: border-box;
+	height: 80px;
+}
+
+#logo h1 {
+	color: #FFF;
+	font-size: 2em;
+	font-style: italic;
+    padding-top: 10px;
+}
+
+#logo span {
+	color: #ebebd5;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Nav */
+#nav {
+	background-color: #616161;
+	padding-left: 250px;
+	border-style: none solid;
+    border-width: medium 4px 4px;
+	border-color: #841412;
+}
+
+#navLeft {
+	display: table-cell;
+	background-image: url(../images/Financial1LeftBackground.jpg);
+	padding: 6px;
+	min-width: 186px;
+	vertical-align: top;
+}
+
+.navLeftBtn {
+	display: table;
+	text-align: center;
+	margin: auto auto 20px;
+}
+
+a.navLeftBtn  {
+	background-image: url(../images/Financial1LeftButton.jpg);
+	width: 132px;
+	height: 25px;
+	white-space: nowrap;
+	color: white;
+	font-size: 1em;
+    line-height: 25px;
+    margin: 1px;
+}
+
+#nav ul {
+	display: inline-block;
+	padding: 0em 2em;
+	margin: 0px;
+}
+
+#nav>ul>li {
+	display: inline-block;
+}
+
+#nav>ul>li:last-child {
+	padding-right: 0;
+}
+
+#nav>ul>li>a {
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	background-color: #484848;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    color: #ebebd5;
+    display: block;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 2px 20px;
+    padding: 0.1em 4em;
+    text-decoration: none;
+}
+
+#nav>ul>li>a:hover {
+	color: #FFF;
+}
+
+#nav li.active a {
+	color: #FFF;
+}
+
+/* Main */
+#main {
+	min-width: 770px;
+	background-color: #dddddd;
+	border-style: none solid solid;
+    border-width: medium 4px 4px;
+	border-color: #841412;
+	display: table;
+	overflow: hidden;
+}
+
+#content {
+	display: table-cell;
+	width: 100%;
+}
+
+.transformation {
+	display: inline-block;
+}
+
+.oia {
+	text-align: left;
+	margin-top: 2px;
+}
+
+TD, P, A, TH, INPUT, SELECT {
+	font-family: arial, tahoma, helvetica, sans-serif,;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+TT {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+/* interactive control classes */
+INPUT.HATSBUTTON {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	white-space: pre;
+}
+
+SELECT.HATSDROPDOWN {
+	font-family: arial, tahoma, helvetica, sans-serif,;
+}
+
+/* static text classes */
+TABLE.HATSBUTTONTABLECELL {
+	padding: 4px;
+}
+
+/* table classes */
+TABLE.HATSTABLE {
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+	background-color: #cccccc;
+	border-collapse: collapse;
+}
+
+.HATSTABLEHEADER {
+	background-color: #808080;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding: 4px;
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+}
+
+.HATSTABLEEVENROW {
+	background-color: #dddddd;
+}
+
+.HATSTABLEODDROW {
+	background-color: #eeeeee;
+}
+
+TD.HATSTABLECELL {
+	padding: 4px;
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+}
+
+TD.HATSTABLECAPTIONCELL {
+	padding: 4px;
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+}
+
+TABLE.HATSFIELDTABLE {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HATSFIELD {
+	font-family: courier new, monospace;
+	color: black;
+}
+
+/* Disabled field */
+.HDF {
+	font-family: courier new, monospace;
+	color: gray;
+}
+
+/* links */
+A.HATSLINK:link, A.HATSLINK:visited, A.HostKeyLink:link, A.HostKeyLink:visited {
+	color: #841412;
+}
+
+input.ApplicationButton, select.ApplicationDropDown {
+	width: 15em;
+}
+
+A.HATSLINK:hover {
+	color: #5555ff;
+}
+
+/* popup classes */
+DIV.HATSPOPUP {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 150px;
+	height: 170px;
+	overflow: auto;
+	border: solid black 1px;
+	background-color: #eeeeff;
+	/*-moz-opacity: .46; only works in ns7, moz */
+	filter: alpha(opacity = 90, style = 0);
+	z-index: 5;
+	/*-moz-border-radius: 6%;*/
+}
+
+TABLE.HATSPOPUPTABLE {
+	background-color: #eeeeff;
+	border: 0px;
+	width: 100%;
+}
+
+TH.HATSPOPUPTH {
+	background-color: #cccccc;
+	text-align: right;
+}
+
+/* Style Definition for all widgets with color mapping enabled (Hcolor)  */
+/* These color map the terminal fields foreground colors to these .html  */
+/* color and attributes.                                                 */
+.HBLANK, input.HBLANK {
+	color: black;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HBLUE, input.HBLUE {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HGREEN, input.HGREEN {
+	color: black;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HCYAN, input.HCYAN {
+	color: #444444;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HRED, input.HRED {
+	color: red;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HMAGENTA, input.HMAGENTA {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HBROWN, input.HBROWN {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HWHITE, input.HWHITE {
+	color: #888888;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HGRAY, input.HGRAY {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLBLUE, input.HLBLUE {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLGREEN, input.HLGREEN {
+	color: #888888;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLCYAN, input.HLCYAN {
+	color: #666666;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLRED, input.HLRED {
+	color: red;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLMAGENTA, input.HLMAGENTA {
+	color: #555555;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLYELLOW, input.HLYELLOW {
+	color: #666666;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HHWHITE, input.HHWHITE {
+	color: black;
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+/* keypad links */
+A.ApplicationKeyLink {
+	color: black;
+}
+
+/* keypad buttons */
+INPUT.ApplicationButton {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+INPUT.HostPFKey {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+	width: 4em;
+}
+
+INPUT.HostButton {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+	width: 8em;
+}
+
+INPUT.ApplicationButton:hover {
+	border-color: #cccccc;
+}
+
+INPUT.HostPFKey:hover {
+	border-color: #cccccc;
+}
+
+INPUT.HostButton:hover {
+	border-color: #cccccc;
+}
+
+/* keypad dropdowns */
+select.ApplicationDropDown, select.HostDropDown {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+/* keypad tables */
+TABLE.HostKeypad {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	background-color: #efefef;
+}
+
+.HostKeypad {
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* focus indicator classes used for portlets */
+.HATSFOCUSED {
+	border: thin solid blue;
+}
+
+/* Disconnect, error, busy page style classes */
+.HATSSTATUSTABLE {
+	min-width: 750px;
+	padding: 6px;
+	text-align: left;
+}
+
+.HATSSTATUSTABLE td {
+	padding: 6px 0;
+}
+
+.HATSSTATUSHEADER {
+	border-color: #888888;
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background-color: #555555;
+	/* For accessibility compliance: change following value to 180% */
+	font-size: 18pt;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.HATSSTATUSFOOTER {
+	border-color: #888888;
+	border-style: solid;
+	border-width: 1px;
+	color: black;
+	background-color: #cccccc;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.HATSFOOTERSTATUSHEADER, .HATSFOOTERSTATUSINFO {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.statusArea {
+	font-family: arial, tahoma, helvetica, sans-serif,;
+	margin: auto;
+	color: black;
+}
+
+DIV.statusArea {
+	border-top: 1px solid #888888;
+	margin: 2px 10px 0;
+}
+
+TABLE.statusArea {
+	table-layout: fixed;
+	empty-cells: hide;
+}
+
+.cursorRowColumn {
+	text-align: right;
+}
+
+.inputInhibited {
+	color: red;
+	font: bold;
+}
+
+TABLE.HATSESCROLL {
+	background-color: #FFFFFF;
+}
+
+TABLE.HATSESCROLL TD.HATSESCROLLBUTTON {
+	background-color: #999999;
+	border: 1px solid #666666;
+}
+
+.HCURSORINDICATOR {
+	color: red;
+	text-decoration: underline;
+	font: bold;
+	background-color: #666666;
+}
+
+.HF {
+	font-family: courier new, monospace;
+}

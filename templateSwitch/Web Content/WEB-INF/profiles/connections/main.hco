@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><hodconnection LUName="" LUNameSource="" SSL="false" TNEnhanced="true" WFEnabled="false" certificateFile="" codePage="037" codePageKey="KEY_US" connecttimeout="120" description="" disableFldShp="" disableNumSwapSubmit="" disconnecttimeout="120" enableScrRev="Customized" host="rdt" hostSimulationName="" port="23" screenSize="2" sessionType="1" singlelogon="true" sslUseJSSE="false" useHostSimulationTrace="false">
+   <otherParameters>
+      <parameter name="negotiateCResolution" value="true"/>
+   </otherParameters>
+   <classSettings>
+      <class name="com.ibm.hats.common.NextScreenSettings">
+         <setting name="default.blankScreen" value="timeout"/>
+         <setting name="default.appletDelayInterval" value="400"/>
+         <setting name="default.delayInterval" value="1200"/>
+         <setting name="default.delayStart" value="2000"/>
+      </class>
+   </classSettings>
+   <webexpresslogon enabled="false"/>
+   <poolsettings enabled="false" maxbusytime="-1" maxconnections="1" maxidletime="-1" minconnections="0" overflowallowed="false" waittimeout="120"/>
+   <hodlogonspec/>
+</hodconnection>

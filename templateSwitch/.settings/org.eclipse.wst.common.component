@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="templateSwitch">
+        <wb-resource deploy-path="/" source-path="/Web Content" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Java Source"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated"/>
+        <property name="java-output-path" value="/templateSwitch/Web Content/WEB-INF/classes"/>
+        <property name="jsf.base" value="7.5.0.0"/>
+        <property name="jsf.ri" value="7.5.0.0"/>
+        <property name="context-root" value="templateSwitch"/>
+    </wb-module>
+</project-modules>

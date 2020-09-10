@@ -1,0 +1,118 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+.calendar body, .calendar td {
+	font-family:  arial, tahoma, helvetica, sans-serif;
+	font-size: 9pt;
+}
+
+/*inline calendar classes*/
+.hatsCalendarCloseBar {
+	background-color: #165ea5;
+}
+
+.hatsCalendarCloseBar td {
+	align: right;
+	padding: 0px !important;
+}
+
+.closeAnchor {
+	background-color: transparent !important;
+	color: transparent !important; 
+	padding:3px !important;
+}
+/*end inline calendar classes*/
+
+.calendar td {
+	padding: 4px;
+}
+
+table.calendar {
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+
+.calendar a.visited, .calendar a:link {
+	color: blue;
+	text-decoration: none;
+}
+
+.month {
+	background-color: #165ea5;	
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	height: 1.5em;
+	padding: 2px;
+	color: white;
+}
+
+.year {
+	background-color: #165ea5;	
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	height: 1.5em;
+	padding: 2px;
+	color: white;
+}
+
+.dayOfWeek {
+	background-color: #bbbbbb;	
+	font-weight: bold;
+	padding: 2px;
+	text-align: center;
+}
+
+.day {
+/*	font-family: courier new, monospace;*/
+	background-color: white;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #dddddd;
+	padding: 2px;
+	width: 2em;
+	height: 1.5em;
+}
+
+.focusDay, .link {
+	font-family: courier new, monospace;
+	text-align: center;
+	font-weight: bold;	
+	padding: 2px;
+	width: 2em;
+	height: 1.5em;
+	border: 1px solid #dddddd;
+	border-bottom: 3px solid #9988ff;	
+	background-color: #ffff8a;
+}
+
+.focusDefaultDay {
+	font-family: tahoma, arial, helvetica,  sans-serif;
+	text-align: center;
+	font-style: italic;	
+	font-weight: bold;	
+	border: 1px solid #000000;
+	padding: 2px;
+	width: 2em;
+	height: 1.5em;
+	background-color: #BDFCE9;
+}
+
+.calendar a:hover {
+	text-decoration: underline;
+	padding: 2px;
+	background-color: #ccccff;
+}
+
+.calendar a:focus {
+	text-decoration: underline;
+	padding: 2px;
+	line-height: 2px;
+	background-color: #ccccff;
+}
+.calendar a:active {
+	text-decoration: underline;
+	padding: 1px;
+	background-color: #ccccff;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><macro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hatsMacroSchema.xsd">
+   <associatedConnections default="main">
+      <connection name="main"/>
+   </associatedConnections>
+   <extracts/>
+   <prompts/>
+   <HAScript author="" blockinput="false" creationdate="" delayifnotenhancedtn="0" description="" ignorepauseforenhancedtn="true" ignorepausetimeforenhancedtn="true" name="disconnect" pausetime="300" promptall="true" supressclearevents="false" timeout="60000" usevars="false">
+
+    <screen entryscreen="true" exitscreen="false" name="Screen1" transient="false">
+        <comment>
+            !visualinfo:associatedScreenName=disconnect\Screen1.hsc;!
+        </comment>
+        <description uselogic="1 and 2">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <block casesense="false" col="20" invertmatch="false" optional="false" row="1"> 
+          <string value="     Health Care Provider Menu   - July  "/>
+          <string value="                                         "/>
+          <string value="                                         "/>
+          <string value="                                         "/>
+               </block> 
+        </description>
+        <actions>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="[pf3]" xlatehostkeys="true"/>
+        </actions>
+        <nextscreens timeout="0">
+            <nextscreen name="Screen2"/>
+        </nextscreens>
+    </screen>
+
+    <screen entryscreen="false" exitscreen="true" name="Screen2" transient="false">
+        <comment>
+            !visualinfo:associatedScreenName=disconnect\Screen2.hsc;!
+        </comment>
+        <description uselogic="1 and (2 and 3 and 4)">
+            <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+            <cursor col="2" invertmatch="false" optional="false" row="1"/>
+            <numfields invertmatch="false" number="1" optional="false"/>
+            <numinputfields invertmatch="false" number="1" optional="false"/>
+        </description>
+        <actions>
+            <input col="0" encrypted="false" movecursor="true" row="0" value="cesf logoff[enter]" xlatehostkeys="true"/>
+            <custom args="Please DO NOT remove this tag!" id="waitForDisconnect"/>
+        </actions>
+        <nextscreens timeout="0">
+        </nextscreens>
+    </screen>
+
+</HAScript>
+</macro>

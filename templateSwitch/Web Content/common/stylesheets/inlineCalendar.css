@@ -1,0 +1,51 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+.calendar body,.calendar td {
+	font-family:  arial,tahoma,helvetica,sans-serif;
+	font-size: 9pt;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;	
+}
+
+.hatsCalendarCloseBar {
+}
+
+.hatsCalendarCloseBar td {
+	text-align: right !important;
+	padding: 0px !important;
+}
+
+.closeAnchor {
+	background-color: transparent !important;
+	color: transparent !important; 
+	padding:3px !important;
+}
+
+table.calendar {
+	border-collapse: collapse;
+	-webkit-box-shadow: 3px 3px 6px #557;
+	-moz-box-shadow: 3px 3px 6px #557;
+	box-shadow: 3px 3px 6px #557;
+}
+
+.focusDefaultDay,.focusDay,.day,.month,.year,.dayOfWeek,.hatsCalendarCloseBar
+{
+	padding: 2px;
+	height: 1.5em;
+}
+
+.year {
+	background-image: none !important;
+	text-align: center !important;
+}
+
+.month {
+	text-align: center !important;
+}
+
+.focusDefaultDay,.focusDay,.day
+{
+	width: 2em;
+}

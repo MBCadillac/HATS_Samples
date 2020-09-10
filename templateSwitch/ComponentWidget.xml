@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><ComponentWidgetList>
+   <components>
+      <component className="com.ibm.hats.transform.components.URLComponent" displayName="URL" helpID="" image="url.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.LinkWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.InputFieldByTextPatternComponent" displayName="%INPUT_FIELD_BY_TEXT_PATTERN_COMPONENT" helpID="com.ibm.hats.doc.hats2758" image="commandLine.gif">
+         <associatedWidgets/>
+      </component>
+      <component className="com.ibm.hats.transform.components.InputFieldBySizePatternComponent" displayName="%INPUT_FIELD_BY_SIZE_PATTERN_COMPONENT" helpID="com.ibm.hats.doc.hats2757" image="commandLine.gif">
+         <associatedWidgets/>
+      </component>
+      <component className="com.ibm.hats.transform.components.AllInputFieldsPatternComponent" displayName="%ALL_INPUT_FIELDS_PATTERN_COMPONENT" helpID="com.ibm.hats.doc.hats2756" image="commandLine.gif">
+         <associatedWidgets/>
+      </component>
+      <component className="com.ibm.hats.transform.components.InputFieldByPositionPatternComponent" displayName="%INPUT_FIELD_BY_POSITION_PATTERN_COMPONENT" helpID="com.ibm.hats.doc.hats4700" image="commandLine.gif">
+         <associatedWidgets/>
+      </component>
+      <component className="com.ibm.hats.transform.components.CommandLineComponent" displayName="%COMMAND_LINE_COMPONENT" helpID="" image="commandLine.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.InputWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.DropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ListWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.PopupWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.RadioButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.TextBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.DialogComponent" displayName="%DIALOG_COMPONENT" helpID="" image="dialog.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.DialogWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.FieldComponent" displayName="%FIELD_COMPONENT" helpID="" image="field.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.FieldWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.VisualTableComponent" displayName="%VISUAL_TABLE_COMPONENT" helpID="" image="table.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.TableWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.HorizontalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.LineGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.VerticalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.EnhancedGridWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.FieldTableComponent" displayName="%FIELD_TABLE_COMPONENT" helpID="" image="table.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.TableWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.HorizontalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.LineGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.VerticalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.EnhancedGridWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.TableComponent" displayName="%TABLE_COMPONENT" helpID="" image="table.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.TableWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.HorizontalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.LineGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.VerticalBarGraphWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.EnhancedGridWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.FunctionKeyComponent" displayName="%FUNCTION_KEY_COMPONENT" helpID="" image="functionKey.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.ButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.LinkWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ButtonTableWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.SLDropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.SLRadioButtonWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.TextComponent" displayName="%TEXT_COMPONENT" helpID="" image="label.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.LabelWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.InputComponent" displayName="%INPUT_FIELD_COMPONENT" helpID="" image="textField.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.InputWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.CheckboxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.CalendarWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.DropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ListWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.PopupWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.RadioButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.TextBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ValidationTextBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.DateTextBoxWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.SelectionListComponent" displayName="%SELECTION_LIST_COMPONENT" helpID="" image="selectionList.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.SLDropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.SLRadioButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.LinkWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ButtonTableWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.InputWithHintsComponent" displayName="%INPUT_FIELD_WITH_HINTS_COMPONENT" helpID="" image="textField.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.DropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ListWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.PopupWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.RadioButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget"/>
+         </associatedWidgets>
+      </component>
+      <component className="com.ibm.hats.transform.components.ItemSelectionComponent" displayName="%ITEM_SELECTION_COMPONENT" helpID="" image="itemSelectionComponent.gif">
+         <associatedWidgets>
+            <widget className="com.ibm.hats.transform.widgets.InputWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ItemSelectionLinkWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.CheckboxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.DropdownWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ListWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.ISRadioButtonWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.PopupWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget"/>
+            <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget"/>
+         </associatedWidgets>
+      </component>
+   </components>
+   <widgets>
+      <widget className="com.ibm.hats.transform.widgets.SLDropdownWidget" displayName="%DROP_DOWN_SELECTION_WIDGET" image="dropdown.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.CheckboxWidget" displayName="%CHECKBOX_WIDGET" image="checkbox.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.ValidationTextBoxWidget" displayName="%DOJO_VALIDATIONTEXTBOX_WIDGET" image="dojoTextBox.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.InputWidget" displayName="%TEXT_INPUT_WIDGET" image="textField.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.SubfilePopupWidget" displayName="%SUBFILE_POPUP_WIDGET" image="subfile.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.SLRadioButtonWidget" displayName="%RADIO_BUTTON_SELECTION_WIDGET" image="radioButton.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.TextBoxWidget" displayName="%DOJO_TEXTBOX_WIDGET" image="dojoTextBox.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.EnhancedGridWidget" displayName="%DOJO_ENHANCEDGRID_WIDGET" image="dojoxGrid.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.DialogWidget" displayName="%DIALOG_COMPONENT" image="dialog.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.RadioButtonWidget" displayName="%RADIO_BUTTON_DATA_ENTRY_WIDGET" image="radioButton.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.ButtonWidget" displayName="%BUTTON_WIDGET" image="button.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.FieldWidget" displayName="%FIELD_COMPONENT" image="field.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.ListWidget" displayName="%LIST_WIDGET" image="list.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.ButtonTableWidget" displayName="%BUTTON_TABLE_WIDGET" image="buttonTable.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.ComboBoxWidget" displayName="%DOJO_COMBOBOX_WIDGET" image="dojoComboBox.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.DropdownWidget" displayName="%DROP_DOWN_DATA_ENTRY_WIDGET" image="dropdown.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.DateTextBoxWidget" displayName="%DOJO_DATETEXTBOX_WIDGET" image="dojoTextBox.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.VerticalBarGraphWidget" displayName="%VERTICAL_BAR_GRAPH_WIDGET" image="verticalBarGraph.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.HorizontalBarGraphWidget" displayName="%HORIZONTAL_BAR_GRAPH_WIDGET" image="graph.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.ItemSelectionLinkWidget" displayName="%ITEM_SELECTION_LINK_WIDGET" image="itemSelectionLinks.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.TableWidget" displayName="%TABLE_WIDGET" image="table.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.PopupWidget" displayName="%POPUP_WIDGET" image="validValues.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.LineGraphWidget" displayName="%LINE_GRAPH_WIDGET" image="lineGraph.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.ISRadioButtonWidget" displayName="%ITEM_SELECTION_RADIO_BUTTON_WIDGET" image="radioButton.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.LabelWidget" displayName="%LABEL_WIDGET" image="label.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.SubfileCheckboxWidget" displayName="%SUBFILE_CHECKBOX_WIDGET" image="subfile.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.dojo.FilteringSelectWidget" displayName="%DOJO_FILTERINGSELECT_WIDGET" image="dojoFilteringSelect.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.CalendarWidget" displayName="%CALENDAR_WIDGET" image="calendar.gif"/>
+      <widget className="com.ibm.hats.transform.widgets.LinkWidget" displayName="%LINK_WIDGET" image="links.gif"/>
+   </widgets>
+</ComponentWidgetList>

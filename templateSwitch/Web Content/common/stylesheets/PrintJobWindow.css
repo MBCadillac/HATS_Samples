@@ -1,0 +1,23 @@
+/* Information on  stylesheets and templates is available in   *
+ * of the User's and Administrator's Guide                     */
+
+h2.PrintJobHeading {
+  font-family: serif
+}
+
+b.PrintSessionInfo {
+  font-family: serif
+}
+
+b.PrintLUNameInfo {
+  font-family: serif
+}
+
+tr.ListHeader {
+  font-family: serif
+}
+
+tr.ListEntry {
+  font-family: serif
+}
+

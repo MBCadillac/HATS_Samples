@@ -1,0 +1,91 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+/* Reverse video color schema for use with white background */
+
+.RHBLANK, input.RHBLANK {
+       color: white;
+       background-color: black;
+}
+
+.RHBLUE, input.RHBLUE {
+       color: white;
+       background-color: blue;
+}
+
+.RHGREEN, input.RHGREEN {
+       color: white;
+       background-color: green;
+}
+
+.RHCYAN, input.RHCYAN {
+        color: white;
+        background-color: #00ffff;        
+}
+
+.RHRED, input.RHRED {
+       color: white;
+       background-color: red;
+}
+
+.RHMAGENTA, input.RHMAGENTA {
+       color: white;
+       background-color: purple;
+}
+
+.RHBROWN, input.RHBROWN {
+       color: white;
+       background-color: #804000;
+}
+
+.RHWHITE, input.RHWHITE {
+       color: white;
+       background-color: #666666;
+}
+
+.RHGRAY, input.RHGRAY {
+       color: white;
+       background-color:  #a0a0a4;
+}
+
+.RHLBLUE, input.RHLBLUE {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #4040c0;
+}
+
+.RHLGREEN, input.RHLGREEN {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #40c040;
+}
+
+.RHLCYAN, input.RHLCYAN {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #40c0c0;
+}
+
+.RHLRED, input.RHLRED {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #ff4040;
+}
+
+.RHLMAGENTA, input.RHLMAGENTA {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #c040ff;
+}
+
+.RHLYELLOW, input.RHLYELLOW {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: #c0c000;
+}
+
+.RHHWHITE, input.RHHWHITE {
+	font-family: courier new, monospace;
+	color: white;
+	background-color: black;
+}

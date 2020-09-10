@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><event defaultHostKey="[enter]" description="" type="screenRecognize">
+   <actions>
+      <apply applyGlobalRules="true" enabled="true" immediateKeyset="" template="Blank.jsp" transformation="changeTemplate.jsp"/>
+   </actions>
+   <associatedScreens>
+      <screen name="connect/Screen1"/>
+   </associatedScreens>
+   <globalRules/>
+   <textReplacement/>
+   <description>
+     <oia invertmatch="false" optional="false" status="NOTINHIBITED"/>
+     <customreco id="com.ibm.hats.common.customlogic.GlobalVariableScreenReco::{variable(name=change,option=value,resource=local)}EQUAL{string(value=change)}" invertmatch="false" optional="false"/>
+</description>
+   <nextEvents defaultEvent=""/>
+</event>

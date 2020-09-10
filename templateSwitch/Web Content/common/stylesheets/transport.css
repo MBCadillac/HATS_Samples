@@ -1,0 +1,650 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+@import url(commontheme.css);
+@import url(inlineCalendar.css);
+
+/* transport template specific additions to inlineCalendar */
+.hatsCalendarCloseBar {
+	background: #ed3900 url(../images/transport/lvl1nav_item_bg.jpg)
+		repeat-x scroll 0 bottom;
+}
+
+table.calendar {
+	background-color: white;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-collapse: collapse;
+	border: 2px solid #d0bdc4;
+	margin: 10px 0px;
+}
+
+.focusDefaultDay, .day {
+	border-right: 1px solid #ded;
+}
+
+.focusDay {
+	border: 2px solid #bdc;
+}
+
+td.focusDay a {
+	color: black;
+	text-decoration: none;
+}
+/* end inlineCalendar modifications */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #F3E7E4;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	color: black;
+}
+
+/* Header */
+#header {
+	text-align: center;
+	width: 800px;
+	margin: auto;
+}
+
+/* Main */
+#main {
+	min-width: 792px;
+	clear: both;
+	padding-bottom: 10px;
+	background-color: #E3D7D4;
+	display: inline-block;
+	border: 4px solid #870000;
+}
+
+.transformation {
+	display: inline-block;
+}
+
+.oia {
+	text-align: left;
+	display: inline;
+}
+
+/* Layout & navigation classes */
+.t_COMPANYTITLE {
+	color: black;
+	padding: 20px;
+	font: bold 2em Arial, Helvetica, sans-serif;
+}
+
+#t_wrapper {
+	margin: auto;
+	background-color: #E3D7D4;
+	margin-bottom: 35px;
+}
+
+#t_logo {
+	text-align: left;
+	margin: auto;
+	height: 116px;
+	background: url(../images/transport/main_logo.jpg) top right no-repeat;
+}
+
+#t_content {
+	padding-top: 40px;
+	border-top: 2px solid #870000;
+	clear: both;
+	width: 792px;
+}
+
+#t_lvl1nav_list {
+	background-color: #870000;
+	height: 25px;
+	border-top: 1px solid #64A1BF;
+	overflow: visible;
+	position: relative;
+	white-space: nowrap;
+	text-align: left;
+	margin: auto;
+	padding-top: 2px;
+}
+
+#t_lvl1nav_list a {
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#t_lvl1nav_list ul {
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 0px;
+}
+
+.t_lvl1nav_item {
+	background: url(../images/transport/lvl1nav_item_bg.jpg) repeat-x;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding: 3px 20px 7px 20px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 8px;
+}
+
+.t_lvl1nav_item_hover, #t_lvl1nav_activeitem {
+	background: url(../images/transport/lvl1nav_activeitem_bg.jpg) repeat-x;
+}
+
+.t_lvl1nav_item_hover a, #t_lvl1nav_activeitem a {
+	color: #26363B !important;
+}
+
+.t_lvl1nav_item li {
+	float: left;
+	padding: 0 20px;
+}
+
+.t_lvl1nav_item ul {
+	display: none;
+	background: url(../images/transport/lvl2nav_item_bg.jpg) repeat;
+	line-height: 26px;
+	margin-top: 2px;
+	width: 100%;
+}
+
+.t_lvl1nav_item_hover ul {
+	clear: both;
+	position: absolute;
+	left: 0;
+	top: 25px;
+	z-index: 2 !important;
+}
+
+#t_lvl1nav_activeitem ul {
+	clear: both;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 25px;
+	width: 100%;
+	z-index: 2;
+}
+
+/* Links */
+A.HATSLINK:link, A.HATSLINK:visited, A.ApplicationKeyLink:link, A.ApplicationKeyLink:visited,
+	A.HostKeyLink:link, A.HostKeyLink:visited, a.HATSLINK:active, .calendar a:active,
+	.calendar a:link, .calendar a:visited {
+	font-weight: normal;
+	text-decoration: underline;
+	color: maroon;
+}
+
+a.HATSPROTLINK:link, a.HATSPROTLINK:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.HATSLINK:hover, A.ApplicationKeyLink:hover, A.HostKeyLink:hover,
+	.calendar a:hover, .calendar a:focus, a.HATSPROTLINK:hover {
+	color: red;
+}
+
+/* fields */
+input.HATSINPUT, input.HF, input.HLWHITE, input.HWHITE, input.RHWHITE,
+	input.HLBROWN, input.HBROWN, input.RHBROWN, input.HLBLUE, input.HBLUE,
+	input.RHBLUE, input.HLRED, input.HRED, input.RHRED, input.HLCYAN, input.HCYAN,
+	input.RHCYAN, input.HLMAGENTA, input.HMAGENTA, input.RHMAGENTA, input.HLGREEN,
+	input.HGREEN, input.RHGREEN, input.HLYELLOW, input.HYELLOW, input.RHYELLOW,
+	input.HLGRAY, input.HGRAY, input.RHGRAY, input.HLBLANK, input.HBLANK,
+	input.RHBLANK, #t_content textarea {
+	background: #FFF url(../images/transport/input_normal_bg.png) repeat-x;
+	border: 1px solid #A8A2AC;
+	margin-bottom: 1px;
+}
+
+input.HATSINPUT:focus, .HATSFOCUSED, input.HF:focus, input.HLWHITE:focus,
+	input.HWHITE:focus, input.RHWHITE:focus, input.HLBROWN:focus, input.HBROWN:focus,
+	input.RHBROWN:focus, input.HLBLUE:focus, input.HBLUE:focus, input.RHBLUE:focus,
+	input.HLRED:focus, input.HRED:focus, input.RHRED:focus, input.HLCYAN:focus,
+	input.HCYAN:focus, input.RHCYAN:focus, input.HLMAGENTA:focus, input.HMAGENTA:focus,
+	input.RHMAGENTA:focus, input.HLGREEN:focus, input.HGREEN:focus, input.RHGREEN:focus,
+	input.HLYELLOW:focus, input.HYELLOW:focus, input.RHYELLOW:focus, input.HLGRAY:focus,
+	input.HGRAY:focus, input.RHGRAY:focus, input.HLBLANK:focus, input.HBLANK:focus,
+	input.RHBLANK:focus, #t_content textarea:focus {
+	background: #FFF url(../images/transport/input_focused_bg.png) repeat-x;
+}
+
+.inputInhibited {
+	color: #c00000;
+	font: bold;
+}
+
+.HDF { /* Disabled field */
+	color: #666666;
+}
+
+/* Style Definition for all widgets with color mapping enabled (Hcolor)  */
+/* These color map the terminal fields foreground colors to these .html  */
+/* color and attributes.                                                 */
+.HLWHITE, input.HLWHITE, .HWHITE, input.HWHITE, .HLBROWN, input.HLBROWN,
+	.HBROWN, input.HBROWN, .HLBLUE, input.HLBLUE, .HBLUE, input.HBLUE,
+	.HLRED, input.HLRED, .HRED, input.HRED, .HLCYAN, input.HLCYAN, .HCYAN,
+	input.HCYAN, .HLMAGENTA, input.HLMAGENTA, .HMAGENTA, input.HMAGENTA,
+	.HLGREEN, input.HLGREEN, .HGREEN, input.HGREEN, .HLYELLOW, input.HLYELLOW,
+	.HYELLOW, input.HYELLOW, .HLGRAY, input.HLGRAY, .HGRAY, input.HGRAY,
+	.HLBLANK, input.HLBLANK, .HBLANK, input.HBLANK {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLWHITE, input.HLWHITE, .HLBROWN, input.HLBROWN, .HLBLUE, input.HLBLUE,
+	.HLRED, input.HLRED, .HLCYAN, input.HLCYAN, .HLMAGENTA, input.HLMAGENTA,
+	.HLGREEN, input.HLGREEN, .HLYELLOW, input.HLYELLOW, .HLGRAY, input.HLGRAY,
+	.HLBLANK, input.HLBLANK {
+	font-weight: bold;
+}
+
+.HBLUE, input.HBLUE, .HLBLUE, input.HLBLUE {
+	color: #df0d00;
+}
+
+.HGREEN, input.HGREEN, .HLGREEN, input.HLGREEN {
+	color: black;
+}
+
+.HRED, input.HRED, .HLRED, input.HLRED {
+	color: #870000;
+}
+
+.HWHITE, input.HWHITE, .HLWHITE, input.HLWHITE {
+	color: #5a4915;
+}
+
+.HCYAN, input.HCYAN, .HLCYAN, input.HLCYAN {
+	color: #DD6901;
+}
+
+.HMAGENTA, input.HMAGENTA, .HLMAGENTA, input.HLMAGENTA {
+	color: #FF3D00;
+}
+
+.HBROWN, input.HBROWN, .HLBROWN, input.HLBROWN, .HYELLOW, input.HYELLOW,
+	.HLYELLOW, input.HLYELLOW {
+	color: #CC4444;
+}
+
+.HGRAY, input.HGRAY, .HLGRAY, input.HLGRAY {
+	color: #A26D15;
+}
+
+.RHBLANK, .RHBLUE, .RHGREEN, .RHRED, .RHCYAN, .RHWHITE, .RHMAGENTA,
+	.RHBROWN, .RHYELLOW, .RHGRAY {
+	color: white !important;
+}
+
+.RHBLANK {
+	background-color: #870000 !important;
+}
+
+.RHBLUE {
+	background-color: #df0d00 !important;
+}
+
+.RHGREEN {
+	background-color: #222 !important;
+}
+
+.RHRED {
+	background-color: #870000 !important;
+}
+
+.RHCYAN {
+	background-color: #DD6901 !important;
+}
+
+.RHWHITE {
+	background-color: #5a4915 !important;
+}
+
+.RHMAGENTA {
+	background-color: #FF3D00 !important;
+}
+
+.RHBROWN, .RHYELLOW {
+	background-color: #CC4444 !important;
+}
+
+.RHGRAY {
+	background-color: #A26D15 !important;
+}
+/* table classes */
+.MASTERTABLE {
+	border: solid #cccccc 1px;
+}
+
+TABLE.HATSTABLE {
+	border-collapse: collapse;
+	border: 2px solid #d0bdc4;
+	margin: 10px 0px;
+}
+
+.HATSTABLEHEADER, .dayOfWeek, .month, .year {
+	background: #FFFFFF url(../images/transport/input_focused_bg.png)
+		repeat-x scroll 0 0;
+	color: #870000;
+	font-weight: bold;
+	text-align: left;
+}
+
+.HATSTABLEEVENROW, .HATSTABLEODDROW, .day {
+	background-color: #fbfecf;
+	color: #663300;
+}
+
+.HATSTABLEEVENROW td, .HATSTABLEODDROW td {
+	padding: 2px;
+	border-bottom: 1px solid #f3d5a5;
+}
+
+tr.HATSTABLEEVENROW:hover, tr.HATSTABLEODDROW:hover, td.day:hover,
+	.focusDefaultDay, .focusDay {
+	background-color: #F3D5A5;
+}
+
+td.HATSTABLECELL {
+	white-space: nowrap;
+}
+
+td.HATSTABLECAPTIONCELL {
+	font-style: italic;
+	background-color: #FFF !important;
+}
+
+table.HATSFIELDTABLE {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+/* interactive control classes */
+INPUT.HATSBUTTON {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+SELECT.HATSDROPDOWN {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+/* static text classes */
+.HATSBUTTONTABLECELL {
+	padding: 4px;
+}
+
+/* popup classes */
+DIV.HATSPOPUP {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 150px;
+	height: 170px;
+	overflow: auto;
+	background-color: #FBFCCF;
+	border: 1px solid #FF0000;
+	z-index: 5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+TABLE.HATSPOPUPTABLE {
+	border: 0px;
+	width: 100%;
+}
+
+.HATSPOPUP td {
+	border: 0px;
+}
+
+TH.HATSPOPUPTH, .HATSPOPUP th {
+	background: url(../images/transport/modal_dialog_head_bg.jpg) repeat-x
+		scroll 0 0;
+	color: #FFFFFF;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	text-align: right;
+}
+
+.HATSPOPUPTH A.HATSLINK:link, .HATSPOPUPTH A.HATSLINK:visited,
+	.HATSPOPUP th A.HATSLINK:link, .HATSPOPUP th A.HATSLINK:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.HATSPOPUPTH A.HATSLINK:hover, .HATSPOPUP th a.HATSLINK:hover {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+A.HATSPOPUPITEMLINK:link, A.HATSPOPUPITEMLINK:visited {
+	color: maroon;
+	text-decoration: underline;
+}
+
+A.HATSPOPUPITEMLINK:hover {
+	color: red;
+}
+
+/* Dialogs */
+.HWF .HATSTABLE {
+	border: none;
+}
+
+#HWF_TOPLEFT, #HWF_TOP, #HWF_TOPRIGHT, #HWF_LEFT, #HWF_RIGHT,
+	#HWF_BOTTOMLEFT, #HWF_BOTTOM, #HWF_BOTTOMRIGHT {
+	border-width: 1px !important;
+	border-color: maroon !important;
+}
+
+#HWF_TOPLEFT {
+	background: #ff3d00 url(../images/transport/modal_dialog_head_bg.jpg)
+		repeat-x;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#HWF_TOP {
+	background: #ff3d00 url(../images/transport/modal_dialog_head_bg.jpg)
+		repeat-x;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 3px 10px;
+}
+
+#HWF_TOPRIGHT {
+	background: #ff3d00 url(../images/transport/modal_dialog_head_bg.jpg)
+		repeat-x;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#HWF_BOTTOMLEFT {
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#HWF_BOTTOM {
+}
+
+#HWF_BOTTOMRIGHT {
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/* Status pages */
+.HATSSTATUSTABLE {
+	min-width: 792px;
+	padding: 6px;
+	text-align: left;
+}
+
+.HATSSTATUSHEADER {
+	/* For accessibility compliance: change following value to 180% */
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.HATSSTATUSFOOTER, .HATSFOOTERSTATUSHEADER, .HATSFOOTERSTATUSINFO {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.HATSFOOTERSTATUSHEADER pre {
+	white-space: normal;
+	word-wrap: break-word;
+}
+/* Portlet status classes */
+td.INFO, h1.predefined {
+	background-color: transparent !important;
+}
+
+/* keypad dropdowns */
+select.ApplicationDropDown, select.HostDropDown {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+/* keypad tables */
+/* Buttons and host application / operator area / keypad */
+input.ApplicationButton, input.HostButton, input.HostPFKey {
+	background: url(../images/transport/button_bg.jpg) repeat-x;
+	height: 23px;
+	border: 1px solid #aaaaaa;
+	padding: 1px 3px 4px 3px;
+	color: #444;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+input.HATSBUTTON[type="button"] {
+	background: url(../images/transport/button_bg.jpg) repeat-x;
+	height: 23px;
+	border: 1px solid #aaaaaa;
+	padding: 1px 3px 4px 3px;
+	color: #444;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.appKeypad {
+	text-align: center;
+}
+
+table.ApplicationKeypad {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+table.HostKeypad {
+}
+
+.HostKeypad {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.statusArea {
+}
+
+DIV.statusArea {
+	border-top: 1px solid #cccccc;
+	margin: 2px 10px 0;
+}
+
+TABLE.statusArea {
+	empty-cells: hide;
+}
+
+.cursorRowColumn {
+	text-align: right;
+}
+
+.HCURSORINDICATOR {
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: #f00;
+}
+
+.HF {
+	font-family: courier new, monospace;
+}
+
+/* General HTML classes */
+td, p, input, select, th, textarea {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+select>option {
+	-moz-padding-end: 5px;
+	-moz-padding-start: 3px;
+}
+
+tt { /* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+#t_content ul {
+	margin-left: 20px;
+	list-style-image: url(../images/transport/bullet.gif);
+}
+
+#t_content h1 {
+	margin: 0px 20px;
+	color: #FF3D00;
+	font-size: 24px;
+	border-bottom: 2px solid #CC4444;
+}
+
+#t_content h2 {
+	margin: 0px 20px;
+	color: #FF3D00;
+	font-size: 18px;
+}
+
+#t_content h3 {
+	margin: 0px 20px;
+	color: #FF3D00;
+	font-size: 14px;
+}
+
+#t_content hr {
+	height: 1px;
+	background: red;
+	margin: 10px 20px;
+}

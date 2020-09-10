@@ -1,0 +1,86 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+/* Reverse video color schema for use with black background */
+
+.RHBLANK, input.RHBLANK {
+       color: black;
+       background-color: #00ff00;
+}
+
+.RHBLUE, input.RHBLUE {
+       color: black;
+       background-color: #3c9dff;
+}
+
+.RHGREEN, input.RHGREEN {
+       color: black;
+       background-color: #00ff00;
+}
+
+.RHCYAN, input.RHCYAN {
+       color: black;
+       background-color: #00ffff;
+}
+
+.RHRED, input.RHRED {
+       color: black;
+       background-color: red;
+}
+
+.RHMAGENTA, input.RHMAGENTA {
+       color: black;
+       background-color: #ff00ff;
+}
+
+.RHBROWN, input.RHBROWN {
+       color: black;
+       background-color: yellow;
+}
+
+.RHWHITE, input.RHWHITE {
+       color: black;
+       background-color: #eeeeee;
+}
+
+.RHGRAY, input.RHGRAY {
+       color: black;
+       background-color: #a0a0a4;
+}
+
+.RHLBLUE, input.RHLBLUE {
+	color: black;
+	background-color: #4040c0;
+}
+
+.RHLGREEN, input.RHLGREEN {
+	color: black;
+	background-color: #40c040;
+}
+
+.RHLCYAN, input.RHLCYAN {
+	color: black;	
+	background-color: #40c0c0;
+}
+
+.RHLRED, input.RHLRED {
+	color: black;
+	background-color: #ff4040;
+}
+
+.RHLMAGENTA, input.RHLMAGENTA {
+	color: black;
+	background-color: #c040ff;
+}
+
+.RHLYELLOW, input.RHLYELLOW {
+	color: black;	
+	background-color: yellow;
+	 	
+}
+
+.RHHWHITE, input.RHHWHITE {
+	color: black;
+	background-color: white;
+}
+

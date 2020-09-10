@@ -1,0 +1,677 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+@import url(commontheme.css);
+@import url(inlineCalendar.css);
+
+/* medical template specific additions to inlineCalendar */
+.hatsCalendarCloseBar {
+	background: #C90000 url(../images/medical/lvl1nav_active_item_bg.jpg)
+		repeat-x scroll center top;
+}
+
+.focusDefaultDay, .day {
+	border-right: 1px solid #ded;
+}
+
+.focusDay {
+	border: 2px solid #bdc;
+}
+
+td.focusDay a {
+	color: black;
+	text-decoration: none;
+}
+
+table.calendar {
+	border: 2px solid #EFEAD5;
+	border-collapse: collapse;
+}
+/* end inlineCalendar modifications */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+	background-color: #241A18;
+	color: 574d3a;
+}
+
+/* Header */
+#header {
+	width: 900px;
+	margin: auto;
+	border: 1px solid #7F735C !important;
+}
+
+/* Main */
+#main {
+	min-width: 750px;
+	clear: both;
+	padding: 20px;
+	display: table-cell;
+}
+
+.transformation {
+	display: inline-block;
+}
+
+.oia {
+	text-align: left;
+	display: inline;
+}
+
+/* Layout & navigation classes */
+.m_COMPANYTITLE {
+	color: white;
+	padding-left: 20px;
+	font: bold 2em Arial, Helvetica, sans-serif;
+	line-height: 109px;
+}
+
+#m_logo {
+	text-align: left;
+	height: 109px;
+	background: #7f7c53 url(../images/medical/main_logo.jpg) top right
+		no-repeat;
+}
+
+#m_content {
+	background: #FFF;
+	margin-bottom: 35px;
+	padding: 10px 20px;
+	border: 4px solid #D60000;
+	clear: both;
+	color: #804040;
+}
+
+#bodyTable {
+	display: table;
+	margin: auto;
+	background-color: #33140f;
+	border: 1px solid #7F735C !important;
+	width: 900px;
+}
+
+#m_lvl1nav {
+	padding-top: 20px;
+	vertical-align: top;
+	display: table-cell;
+}
+
+#m_lvl2nav {
+	overflow: hidden;
+	width: 100%;
+}
+
+#m_content_wrapper {
+	padding: 20px;
+	width: 750px;
+}
+
+#m_lvl1nav_list {
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 0px;
+	width: 100px;
+}
+
+.m_lvl1nav_item a {
+	text-decoration: none;
+	color: #666 !important;
+	font-weight: bold;
+}
+
+.m_lvl2nav_item a {
+	text-decoration: none;
+	color: #FFF !important;
+	font-weight: bold;
+}
+
+.m_lvl1nav_item {
+	background: #CFD6C4 url(../images/medical/lvl1nav_item_bg.jpg) repeat-x
+		scroll center top;
+	text-align: center;
+	margin-bottom: 5px;
+	padding: 2px;
+	-moz-border-radius-bottomright: 7px;
+	-moz-border-radius-topright: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	-webkit-box-shadow: 2px 2px 5px #110000;
+	-moz-box-shadow: 2px 2px 5px #110000;
+	box-shadow: 2px 2px 5px #110000;
+}
+
+.m_lvl1nav_active_item {
+	background: #C90000 url(../images/medical/lvl1nav_active_item_bg.jpg)
+		repeat-x scroll center top;
+}
+
+.m_lvl1nav_active_item a {
+	color: #FFF !important;
+}
+
+#m_lvl2nav ul {
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 0px;
+}
+
+.m_lvl2nav_item {
+	float: left;
+	height: 29px;
+	line-height: 29px;
+	background: url(../images/medical/lvl2nav_item_bg.jpg) repeat-x;
+	border-right: 1px solid #C3CB7D;
+	padding: 0 10px;
+	margin-right: 1px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 2px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 2px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 2px;
+	-webkit-box-shadow: 5px -2px 5px #110000;
+	-moz-box-shadow: 5px -2px 5px #110000;
+	box-shadow: 5px -2px 5px #110000;
+}
+
+.m_lvl2nav_active_item {
+	background: url(../images/medical/lvl2nav_active_item_bg.jpg) repeat-x;
+	border-right: 1px solid red;
+}
+
+/* Links */
+A.HATSLINK:link, A.HATSLINK:visited, A.ApplicationKeyLink:link, A.ApplicationKeyLink:visited,
+	A.HostKeyLink:link, A.HostKeyLink:visited, a.HATSLINK:active, .calendar a:active,
+	.calendar a:link, .calendar a:visited {
+	font-weight: normal;
+	border-bottom: 1px dotted #987c1d;
+	text-decoration: none;
+	color: #786d2e;
+	line-height: 1.32em;
+}
+
+a.HATSPROTLINK:link, a.HATSPROTLINK:visited {
+	text-decoration: none;
+	color: inherit;
+	line-height: 1.32em;
+}
+
+a.HATSLINK:hover, A.ApplicationKeyLink:hover, A.HostKeyLink:hover,
+	.calendar a:hover, .calendar a:focus, a.HATSPROTLINK:hover {
+	color: #564b0d;
+	border-bottom: 1px solid #987c1d;
+	line-height: 1.32em;
+}
+
+/* fields */
+input.HATSINPUT, input.HF, input.HLWHITE, input.HWHITE, input.RHWHITE,
+	input.HLBROWN, input.HBROWN, input.RHBROWN, input.HLBLUE, input.HBLUE,
+	input.RHBLUE, input.HLRED, input.HRED, input.RHRED, input.HLCYAN, input.HCYAN,
+	input.RHCYAN, input.HLMAGENTA, input.HMAGENTA, input.RHMAGENTA, input.HLGREEN,
+	input.HGREEN, input.RHGREEN, input.HLYELLOW, input.HYELLOW, input.RHYELLOW,
+	input.HLGRAY, input.HGRAY, input.RHGRAY, input.HLBLANK, input.HBLANK,
+	input.RHBLANK, #m_content textarea {
+	border: 1px solid #aa9;
+	background: #FFF url(../images/medical/input_normal_bg.png) repeat-x;
+}
+
+input.HATSINPUT:focus, .HATSFOCUSED, input.HF:focus, input.HLWHITE:focus,
+	input.HWHITE:focus, input.RHWHITE:focus, input.HLBROWN:focus, input.HBROWN:focus,
+	input.RHBROWN:focus, input.HLBLUE:focus, input.HBLUE:focus, input.RHBLUE:focus,
+	input.HLRED:focus, input.HRED:focus, input.RHRED:focus, input.HLCYAN:focus,
+	input.HCYAN:focus, input.RHCYAN:focus, input.HLMAGENTA:focus, input.HMAGENTA:focus,
+	input.RHMAGENTA:focus, input.HLGREEN:focus, input.HGREEN:focus, input.RHGREEN:focus,
+	input.HLYELLOW:focus, input.HYELLOW:focus, input.RHYELLOW:focus, input.HLGRAY:focus,
+	input.HGRAY:focus, input.RHGRAY:focus, input.HLBLANK:focus, input.HBLANK:focus,
+	input.RHBLANK:focus, #m_content textarea:focus {
+	background: #FFF url(../images/medical/input_focused_bg.png) repeat-x;
+}
+
+.inputInhibited {
+	color: #cc0000;
+	font: bold;
+}
+
+.HDF { /* Disabled field */
+	color: #cccccc;
+}
+
+/* Style Definition for all widgets with color mapping enabled (Hcolor)  */
+/* These color map the terminal fields foreground colors to these .html  */
+/* color and attributes.                                                 */
+.HLWHITE, input.HLWHITE, .HWHITE, input.HWHITE, .HLBROWN, input.HLBROWN,
+	.HBROWN, input.HBROWN, .HLBLUE, input.HLBLUE, .HBLUE, input.HBLUE,
+	.HLRED, input.HLRED, .HRED, input.HRED, .HLCYAN, input.HLCYAN, .HCYAN,
+	input.HCYAN, .HLMAGENTA, input.HLMAGENTA, .HMAGENTA, input.HMAGENTA,
+	.HLGREEN, input.HLGREEN, .HGREEN, input.HGREEN, .HLYELLOW, input.HLYELLOW,
+	.HYELLOW, input.HYELLOW, .HLGRAY, input.HLGRAY, .HGRAY, input.HGRAY,
+	.HLBLANK, input.HLBLANK, .HBLANK, input.HBLANK {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+.HLWHITE, input.HLWHITE, .HLBROWN, input.HLBROWN, .HLBLUE, input.HLBLUE,
+	.HLRED, input.HLRED, .HLCYAN, input.HLCYAN, .HLMAGENTA, input.HLMAGENTA,
+	.HLGREEN, input.HLGREEN, .HLYELLOW, input.HLYELLOW, .HLGRAY, input.HLGRAY,
+	.HLBLANK, input.HLBLANK {
+	font-weight: bold;
+}
+
+.HBLUE, input.HBLUE, .HLBLUE, input.HLBLUE {
+	color: #c00;
+}
+
+.HGREEN, input.HGREEN, .HLGREEN, input.HLGREEN {
+	color: #574D3A;
+}
+
+.HRED, input.HRED, .HLRED, input.HLRED {
+	color: #FF5050;
+}
+
+.HWHITE, input.HWHITE, .HLWHITE, input.HLWHITE {
+	color: #977;
+}
+
+.HCYAN, input.HCYAN, .HLCYAN, input.HLCYAN {
+	color: #58009E;
+}
+
+.HMAGENTA, input.HMAGENTA, .HLMAGENTA, input.HLMAGENTA {
+	color: #666666;
+}
+
+.HBROWN, input.HBROWN, .HLBROWN, input.HLBROWN, .HYELLOW, input.HYELLOW,
+	.HLYELLOW, input.HLYELLOW {
+	color: #804040;
+}
+
+.HGRAY, input.HGRAY, .HLGRAY, input.HLGRAY {
+	color: #996633;
+}
+
+.RHBLANK, .RHBLUE, .RHGREEN, .RHRED, .RHCYAN, .RHWHITE, .RHMAGENTA,
+	.RHBROWN, .RHYELLOW, .RHGRAY {
+	color: white !important;
+}
+
+.RHBLANK {
+	background-color: #241A18 !important;
+}
+
+.RHBLUE {
+	background-color: #c00 !important;
+}
+
+.RHGREEN {
+	background-color: #574D3A !important;
+}
+
+.RHRED {
+	background-color: #FF5050 !important;
+}
+
+.RHCYAN {
+	background-color: #58009E !important;
+}
+
+.RHWHITE {
+	background-color: #977 !important;
+}
+
+.RHMAGENTA {
+	background-color: #666666 !important;
+}
+
+.RHBROWN, .RHYELLOW {
+	background-color: #804040 !important;
+}
+
+.RHGRAY {
+	background-color: #996633 !important;
+}
+/* table classes */
+.MASTERTABLE {
+	border: solid #cccccc 1px;
+}
+
+TABLE.HATSTABLE {
+	border-collapse: collapse;
+}
+
+.HATSTABLEHEADER, .dayOfWeek, .month, .year {
+	color: #574D3A;
+	font-weight: bold;
+	text-align: left;
+}
+
+.year, .month {
+	background-color: #F7F9F7;
+}
+
+.dayOfWeek {
+	background: #CFD6C4 url(../images/medical/lvl1nav_item_bg.jpg) repeat-x
+		scroll center top;
+}
+
+.HATSTABLEEVENROW {
+	background-color: #dfdac0;
+	color: #505050;
+	border-bottom: 1px solid white;
+}
+
+.HATSTABLEODDROW {
+	background-color: #efead5;
+	color: #505050;
+	border-bottom: 1px solid white;
+}
+
+.day {
+	background-color: #dfdac0;
+	color: #505050;
+}
+
+td.HATSTABLECELL {
+	padding: 2px;
+	white-space: nowrap;
+}
+
+tr.HATSTABLEODDROW:hover, tr.HATSTABLEEVENROW:hover, td.day:hover,
+	.focusDefaultDay, .focusDay {
+	background-color: #e7c3b8;
+}
+
+td.HATSTABLECAPTIONCELL {
+	border-width: 1px;
+	border-color: #888888;
+	border-style: solid;
+	padding: 4px;
+}
+
+table.HATSFIELDTABLE {
+	white-space: normal;
+	letter-spacing: normal;
+}
+
+/* interactive control classes */
+INPUT.HATSBUTTON {
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+SELECT.HATSDROPDOWN {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+/* static text classes */
+.HATSBUTTONTABLECELL {
+	padding: 4px;
+}
+
+/* popup classes */
+DIV.HATSPOPUP {
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	width: 150px;
+	height: 170px;
+	overflow: auto;
+	background-color: #DFDAC0;
+	border: 1px solid #AAAAAA;
+	z-index: 5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 1px 1px 3px #755;
+	-webkit-box-shadow: 1px 1px 3px #755;
+	box-shadow: 1px 1px 3px #755;
+}
+
+TABLE.HATSPOPUPTABLE {
+	border: 0px;
+	width: 100%;
+}
+
+.HATSPOPUP td {
+	border: 0px;
+}
+
+TH.HATSPOPUPTH, .HATSPOPUP th {
+	background: url(../images/medical/modal_box_title_bg.jpg) repeat-x;
+	color: #FFFFFF;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	text-align: right;
+}
+
+.HATSPOPUPTH A.HATSLINK:link, .HATSPOPUPTH A.HATSLINK:visited,
+	.HATSPOPUP th A.HATSLINK:link, .HATSPOPUP th A.HATSLINK:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dotted white;
+}
+
+.HATSPOPUPTH A.HATSLINK:hover, .HATSPOPUP th a.HATSLINK:hover {
+	border-bottom: 1px solid white;
+}
+
+A.HATSPOPUPITEMLINK:link, A.HATSPOPUPITEMLINK:visited {
+	color: #241A18;
+	text-decoration: none;
+	border-bottom: 1px dotted #2a1a18;
+}
+
+A.HATSPOPUPITEMLINK:hover {
+	color: #564b0d;
+	border-bottom: 1px solid #987c1d;
+}
+
+/* Dialogs */
+.HWF .HATSTABLE {
+	border: none;
+}
+
+#HWF_TOPLEFT, #HWF_TOP, #HWF_TOPRIGHT, #HWF_LEFT, #HWF_RIGHT,
+	#HWF_BOTTOMLEFT, #HWF_BOTTOM, #HWF_BOTTOMRIGHT {
+	border-color: #766449 !important;
+	border-width: 1px !important;
+}
+
+#HWF_TOPLEFT {
+	background: url(../images/medical/modal_box_title_bg.jpg) repeat-x;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#HWF_TOP {
+	background: url(../images/medical/modal_box_title_bg.jpg) repeat-x;
+}
+
+#HWF_TOP .HATSFIELD {
+	color: #FFF;
+	font-weight: bold;
+}
+
+#HWF_TOPRIGHT {
+	background: url(../images/medical/modal_box_title_bg.jpg) repeat-x;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#HWF_BOTTOMLEFT {
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#HWF_BOTTOMRIGHT {
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/* Status pages */
+.HATSSTATUSTABLE {
+	width: 90%;
+	padding: 6px;
+	text-align: left;
+}
+
+.HATSSTATUSHEADER {
+	/* For accessibility compliance: change following value to 180% */
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.HATSSTATUSFOOTER, .HATSFOOTERSTATUSHEADER, .HATSFOOTERSTATUSINFO {
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+.HATSFOOTERSTATUSHEADER pre {
+	white-space: normal;
+	word-wrap: break-word;
+}
+/* Portlet status classes */
+td.INFO, h1.predefined {
+	background-color: transparent !important;
+}
+
+/* keypad dropdowns */
+select.ApplicationDropDown, select.HostDropDown {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: change following value to 90% */
+	font-size: 9pt;
+}
+
+/* keypad tables */
+/* Buttons and host application / operator area / keypad */
+input.ApplicationButton, input.HostButton, input.HostPFKey {
+	background: #cc0000 url(../images/medical/button_bg.jpg) repeat-x;
+	height: 23px;
+	border: 1px solid maroon;
+	padding-bottom: 4px;
+	color: #FFF;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+input.HATSBUTTON[type="button"] {
+	background: #cc0000 url(../images/medical/button_bg.jpg) repeat-x;
+	height: 23px;
+	border: 1px solid maroon;
+	padding-bottom: 4px;
+	color: #FFF;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.appKeypad {
+	text-align: center;
+}
+
+table.ApplicationKeypad {
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
+table.HostKeypad {
+}
+
+.HostKeypad {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.statusArea {
+}
+
+DIV.statusArea {
+	border-top: 1px solid #cccccc;
+}
+
+TABLE.statusArea {
+	empty-cells: hide;
+}
+
+.cursorRowColumn {
+	text-align: right;
+}
+
+.HCURSORINDICATOR {
+	color: white;
+	background-color: #c00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.HF {
+	font-family: courier new, monospace;
+}
+
+/* General HTML classes */
+td, p, input, select, th {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	/* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+select>option {
+	-moz-padding-end: 5px;
+	-moz-padding-start: 3px;
+}
+
+tt { /* For accessibility compliance: remove the following line */
+	font-size: 10pt;
+}
+
+#m_content ul {
+	margin-left: 20px;
+	list-style-image: url(../images/medical/bullet.gif);
+}
+
+#m_content h1 {
+	width: 100%;
+	color: #FF5050;
+	font-size: 24px;
+	border-bottom: 2px solid #963;
+}
+
+#m_content h2 {
+	color: #FF5050;
+	font-size: 18px;
+}
+
+#m_content h3 {
+	color: #FF5050;
+	font-size: 14px;
+}
+
+#m_content hr {
+	height: 1px;
+	background: red;
+	margin: 10px 0px;
+}

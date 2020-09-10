@@ -1,0 +1,164 @@
+/* Information on  stylesheets and templates is available in   *
+ * the User's and Administrator's Guide                        */
+
+BODY {
+	font-size: small;
+}
+
+TD, P, INPUT {
+	font-size: small;
+}
+
+/* interactive control classes */
+OPTION.HATSOPTION {
+	font-size: small;
+}
+
+SELECT.HATSDROPDOWN {
+	font-size: small;
+}
+
+/* static text classes */
+SPAN.HATSTEXT {
+	font-size: small;
+}
+
+SPAN.HATSCAPTION {
+	font-size: small;
+}
+
+.HATSTABLEHEADER {
+	font-size: small;
+}
+
+TD.HATSTABLECELL {
+	font-size: small;
+}
+
+TD.HATSTABLECAPTIONCELL {
+	font-size: small;
+}
+
+/* Field style classes */
+.HATSFIELD {
+	font-size: small;
+}
+
+.HDF {
+	font-size: small;
+}
+
+/* links */
+A.HATSLINK:link, A.HATSLINK:visited {
+	font-size: small;
+}
+
+A.HATSPROTLINK:link, A.HATSPROTLINK:visited {
+	font-size: small;
+}
+
+.HBLANK {
+	font-size: small;
+}
+
+.HBLUE {
+	font-size: small;
+}
+
+.HGREEN {
+	font-size: small;
+}
+
+.HCYAN {
+	font-size: small;
+}
+
+.HRED {
+	font-size: small;
+}
+
+.HMAGENTA {
+	font-size: small;
+}
+
+.HBROWN {
+	font-size: small;
+}
+
+.HWHITE {
+	font-size: small;
+}
+
+.HGRAY {
+	font-size: small;
+}
+
+.HLBLUE {
+	font-size: small;
+}
+
+.HLGREEN {
+	font-size: small;
+}
+
+.HLCYAN {
+	font-size: small;
+}
+
+.HLRED {
+	font-size: small;
+}
+
+.HLMAGENTA {
+	font-size: small;
+}
+
+.HLYELLOW {
+	font-size: small;
+}
+
+.HHWHITE {
+	font-size: small;
+}
+
+/* Host keypad link */
+A.HostKeyLink {
+	font-size: small;
+}
+
+/* Application keypad link */
+A.ApplicationKeyLink {
+	font-size: small;
+}
+
+/* Application button */
+INPUT.ApplicationButton, select.ApplicationDropDown {
+	font-size: x-small;
+}
+
+/* Host keypad function key button */
+INPUT.HostPFKey {
+	font-size: x-small;
+}
+
+/* Host keypad application key button */
+INPUT.HostButton, select.HostDropDown {
+	font-size: x-small;
+}
+
+/* Disconnect, error, busy page style classes */
+.HATSSTATUSHEADER {
+	font-size: large;
+}
+
+.HATSSTATUSFOOTER {
+	font-size: x-small;
+}
+
+.HATSFOOTERSTATUSHEADER {
+	font-size: x-small;
+}
+
+.HATSFOOTERSTATUSINFO {
+	font-size: x-small;
+}
