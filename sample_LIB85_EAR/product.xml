@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hats>
+  <component>
+    <name>IBM HATS</name>
+    <release>
+      <value>hats9.7</value>
+      <name>IBM HATS 9.7.0</name>
+    </release>
+    <version>9.7.0</version>
+    <build>
+      <level>201902161414</level>
+      <date>February 16 2019</date>
+    </build>
+    <fixes/>
+  </component>
+</hats>

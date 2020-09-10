@@ -1,0 +1,142 @@
+//
+// Extra permissions can be added if required by the enterprise application.
+//
+// NOTE: Syntax errors in the policy files will cause the enterprise application FAIL to start.
+//       Extreme care should be taken when editing these policy files. It is advised to use
+//       the policytool provided by the JDK for editing the policy files
+//       (WAS_HOME/java/jre/bin/policytool).
+//
+// Be aware that most WebSphere Application Server platforms will copy the was.policy file from a
+// deployable EAR into two different locations on the application server during deployment.
+// If you choose to try to alter the was.policy file after deployment (not recommended), make certain
+// you find and change *both* copies. The Windows platform appears to have only one copy of was.policy
+// after deployment. You should restart the application after any change.
+// For example, on some platforms, you may find this was.policy has been copied to both these locations:
+//   <user.install.root>/config/cells/<cell.name>/applications/DefaultApplication.ear/deployments/appName .../META-INF/was.policy
+//   <user.install.root>/installedApps/<cell.name>/appName .../META-INF/was.policy
+//
+
+grant codeBase "file:${application}" {
+
+  // allow Web Express Logon (WEL) feature with DCAS server
+  permission java.security.SecurityPermission 	 "putProviderProperty.IBMJSSEFIPS";
+  permission java.security.SecurityPermission 	 "insertProvider.IBMJSSEFIPS";
+  permission java.security.SecurityPermission 	 "getProperty.ssl.SocketFactory.provider";
+  permission java.security.SecurityPermission 	 "setProperty.ssl.SocketFactory.provider";
+  permission java.lang.RuntimePermission         "loadLibrary.jclic-sslite140.dll";
+  permission java.lang.RuntimePermission         "accessClassInPackage.sun.net.www.protocol.c";
+
+  // allow logging/tracing, graph widget, reading application files
+  permission java.io.FilePermission "${app.installed.path}${/}-", "read, write, delete";
+
+  // allow applet operation. *:* allows all addresses
+  permission java.net.SocketPermission "*:*", "accept,resolve";
+
+  // allow SSL on AIX platform
+  permission java.lang.RuntimePermission "readFileDescriptor";
+
+  // allow SSL on System z platform
+  permission java.lang.RuntimePermission "writeFileDescriptor";
+
+  // allow IOs to operate
+  permission java.lang.RuntimePermission "modifyThread";
+  permission java.lang.RuntimePermission "modifyThreadGroup";
+
+  // allow EJBs to operate
+  permission java.lang.RuntimePermission "accessClassInPackage.sun.misc";
+
+  // allow interoperability feature with WebFacing
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "accessRuntimeClasses";
+  permission java.util.logging.LoggingPermission "control";
+
+  // allow HATS Admin to operate on WAS V6.1+
+  permission java.lang.RuntimePermission "getClassLoader";
+
+  // allow HATS Admin to operate on System z
+  permission javax.security.auth.AuthPermission "createLoginContext.system.RMI_OUTBOUND";
+  permission javax.security.auth.AuthPermission "wssecurity.readCredential";
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "AdminPermission";
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "ContextManager.getServerCredential";
+
+
+  //
+  // The following set of permissions are specific to System z WAS V5.1.1.
+  // These assume the default installation paths. Adjust if needed for your specific environment.
+  //
+  // The com.tivoli.jmx.MBeanServerPermission will cause an unresolved permission warning in
+  // other environments because other environments use a different package name and class name.
+  // The warning can be safely ignored.
+  //
+  // Likewise, in System z WAS V5.1.1, the javax.management.MBeanPermission will cause an unresolved
+  // permission warning because WAS V5.1.1 uses the com.tivoli.jmx.MBeanServerPermission instead.
+  // You can ignore this warning as well.
+  //
+  permission java.lang.RuntimePermission "setContextClassLoader";
+  permission com.tivoli.jmx.MBeanServerPermission "MBeanServer.*";
+  permission java.io.FilePermission "/usr/lpp/java/J1.4/bin/libjclic-hod5sslight.so", "read";
+  permission java.io.FilePermission "/usr/lpp/java/J1.4/bin/classic/libjclic-hod5sslight.so", "read";
+  permission javax.security.auth.AuthPermission "wssecurity.applicationReadCredential";
+
+  //
+  // The following set of permissions are specific to IBM i Application Server Platform.
+  // These assume the default installation paths. Adjust if needed for your specific environment.
+  //
+  permission java.io.FilePermission "/QIBM/ProdData/Java400/-", "read";
+  permission java.io.FilePermission "/QIBM/ProdData/WebSphere/AppServer/-", "read";
+
+  // If you place an SSL keyring file in C:\etc, for example, you might need to add another permission like:
+  // permission java.io.FilePermission "c:\\etc\\-", "read";
+
+  // allow Struts and JSP useBean tag
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+};
+
+grant codeBase "file:${jars}" {
+
+  // allow Web Express Logon (WEL) feature with DCAS server
+  permission java.io.FilePermission "${app.installed.path}${/}-", "read";
+
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "AdminPermission";
+
+  permission java.lang.RuntimePermission "loadLibrary.jclic-hod5sslight";
+
+  // allow Struts on zOS
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+
+  permission java.lang.RuntimePermission "modifyThread";
+  permission java.lang.RuntimePermission "modifyThreadGroup";
+
+  permission java.util.PropertyPermission "*", "read,write";
+
+  // allow HATS Admin MBeans to operate
+  permission javax.management.MBeanPermission "-#-[-]", "queryNames";
+  permission javax.management.MBeanPermission "*", "*";
+
+  permission java.io.FilePermission "${app.installed.path}${/}..${/}..${/}..${/}..${/}..${/}..${/}-", "read, write, delete";
+
+  // allow HOD terminal bean to operate
+  permission java.awt.AWTPermission "accessClipboard";
+
+  //
+  // The following set of permissions are specific to IBM i Application Server Platform.
+  // These assume the default installation paths. Adjust if needed for your specific environment.
+  //
+  permission java.io.FilePermission "/QIBM/ProdData/Java400/-", "read";
+  permission java.io.FilePermission "/QIBM/ProdData/WebSphere/AppServer/V6/Base/-", "read";
+  permission java.lang.RuntimePermission "accessClassInPackage.sun.misc";
+};
+
+grant codeBase "file:${webComponent}" {
+  permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  permission java.lang.RuntimePermission "modifyThread";
+  permission java.lang.RuntimePermission "modifyThreadGroup";
+
+  permission java.util.PropertyPermission "*", "read,write";
+
+  permission java.io.FilePermission "${app.installed.path}${/}..${/}..${/}..${/}..${/}..${/}..${/}-", "read, write";
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+
+  //allow interoperability with WebFacing 
+  permission java.util.logging.LoggingPermission "control";
+  permission com.ibm.websphere.security.WebSphereRuntimePermission "accessRuntimeClasses";
+};

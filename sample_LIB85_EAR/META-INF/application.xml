@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="8" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_8.xsd">
+ <display-name>sample_LIB85_EAR</display-name>
+ <module id="Module_1599500799749">
+ 	<web>
+ 		<web-uri>templateSwitch.war</web-uri>
+ 		<context-root>templateSwitch</context-root>
+ 	</web>
+ </module>
+ <security-role>
+ 	<role-name>HATSAdministrator</role-name>
+ </security-role>
+ <security-role>
+ 	<role-name>HATSMonitor</role-name>
+ </security-role>
+ <security-role>
+ 	<role-name>HATSOperator</role-name>
+ </security-role> 
+ </application> 

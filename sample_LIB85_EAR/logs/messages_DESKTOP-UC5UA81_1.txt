@@ -1,0 +1,43 @@
+2020.09.01 11:42:17.516 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:18:51.385 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:33:23.407 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:34:07.652 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:37:14.249 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:39:16.989 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:39:30.631 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:48:06.005 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:52:03.648 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 13:52:15.335 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
+2020.09.01 14:01:18.979 com.ibm.hats.runtime.ApplicationSpecificInfo refreshHostScreenFromPS  x1      
+  ERROR HAT0411 The host connection is inactive.
+
+2020.09.01 14:01:18.981 com.ibm.hats.runtime.AppProcessingEngine process_Entry_PostRequest  xb      
+  ERROR HAT0411 The host connection is inactive.
+
+2020.09.10 15:36:19.248 com.ibm.hats.runtime.connmgr.HodConn connectToHost  x15      
+  ERROR HPS5052 Cannot set up a connection to the host using the following session properties:
+  {History=false, WFConnectionUniqueId=, SESSION_QUIETMODE=true, autoReconnect=false, negotiateCResolution=true, port=23, sslUseJSSE=false, autoConnect=false, sessionID=HodConn:#15997665566540, SSL=false, host=rdt, WFSharedConnection=false, codePageKey=KEY_US, screenSize=2, TNEnhanced=true, sessionType=1, WFEnabled=false, codePage=037} (CONNECTION_INACTIVE)
+
+2020.09.10 15:36:20.380 com.ibm.hats.runtime.connmgr.Runtime shutdown  x0      
+  INFO HPS5091 System shutdown.(HARD_SHUTDOWN)
+
